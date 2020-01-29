@@ -1,0 +1,4 @@
+npm init
+npm i next react react-dom
+npm i @zeit/next-css tailwindcss autoprefixer
+npx tailwind init
