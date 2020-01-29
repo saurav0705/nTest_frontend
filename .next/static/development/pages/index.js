@@ -9646,7 +9646,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 var Header = function Header() {
   return __jsx("header", {
-    className: "bg-gray-100 text-gray-800 px-1 md:px-4  ",
+    className: "bg-gray-100 text-gray-800 px-1 md:px-4  sticky top-0 z-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -10579,14 +10579,14 @@ var Query = function Query() {
     },
     __self: this
   }, __jsx("div", {
-    className: "flex",
+    className: "flex overflow-hidden",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }, __jsx("div", {
-    className: "hidden md:block w-1/6 p-8  sticky top-0",
+    className: "hidden md:block w-1/6 p-8",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -10689,51 +10689,58 @@ var Query = function Query() {
       lineNumber: 38
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, "Downvote 7")))), __jsx("div", {
     className: "flex justify-center bg-green-300 p-4 m-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 51
     },
     __self: this
   }, __jsx("div", {
+    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 52
     },
     __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
   }, __jsx("center", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, __jsx("img", {
@@ -10741,68 +10748,75 @@ var Query = function Query() {
     className: "h-6 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }))), __jsx("div", {
     className: "p-1 w-auto text-4m md:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, __jsx("span", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }, "Downvote 7")))), __jsx("div", {
     className: "flex justify-center bg-green-300 p-4 m-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 69
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 70
     },
     __self: this
   }, __jsx("div", {
+    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 71
     },
     __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
   }, __jsx("center", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 72
     },
     __self: this
   }, __jsx("img", {
@@ -10810,68 +10824,75 @@ var Query = function Query() {
     className: "h-6 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }))), __jsx("div", {
     className: "p-1 w-auto text-4m md:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 76
     },
     __self: this
   }, __jsx("span", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, "Downvote 7")))), __jsx("div", {
     className: "flex justify-center bg-green-300 p-4 m-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89
     },
     __self: this
   }, __jsx("div", {
+    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     },
     __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
   }, __jsx("center", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 91
     },
     __self: this
   }, __jsx("img", {
@@ -10879,68 +10900,75 @@ var Query = function Query() {
     className: "h-6 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 92
     },
     __self: this
   }))), __jsx("div", {
     className: "p-1 w-auto text-4m md:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 95
     },
     __self: this
   }, __jsx("span", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 96
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 100
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 101
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, "Downvote 7")))), __jsx("div", {
     className: "flex justify-center bg-green-300 p-4 m-4",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 108
     },
     __self: this
   }, __jsx("div", {
+    className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 109
     },
     __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 110
+    },
+    __self: this
   }, __jsx("center", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 110
     },
     __self: this
   }, __jsx("img", {
@@ -10948,68 +10976,75 @@ var Query = function Query() {
     className: "h-6 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 111
     },
     __self: this
   }))), __jsx("div", {
     className: "p-1 w-auto text-4m md:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 114
     },
     __self: this
   }, __jsx("span", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 119
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 120
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, "Downvote 7")))), __jsx("div", {
     className: "flex justify-center bg-green-300 p-4 m-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, __jsx("div", {
     className: "block md:flex justify-center w-full",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   }, __jsx("center", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   }, __jsx("img", {
@@ -11017,42 +11052,49 @@ var Query = function Query() {
     className: "h-6 mt-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 130
     },
     __self: this
   }))), __jsx("div", {
     className: "p-1 w-auto text-4m md:text-2xl",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, __jsx("span", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
-  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf")), __jsx("div", {
+  }, "weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf"), __jsx("div", {
+    className: "text-right text-gray-500",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 136
+    },
+    __self: this
+  }, "-- author date")), __jsx("div", {
     className: "px-4 mx-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, __jsx("button", {
     "class": "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 139
     },
     __self: this
   }, "Upvote 5"), __jsx("button", {
     "class": "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, "Downvote 7"))))))));
@@ -11062,7 +11104,7 @@ var Query = function Query() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js ***!
   \*******************************************************************************************************************************************/
@@ -11085,5 +11127,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[1,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

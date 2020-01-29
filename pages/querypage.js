@@ -5,8 +5,8 @@ const Query = () => {
 
     return(
         <Layout>
-            <div className="flex">
-                <div className="hidden md:block w-1/6 p-8  sticky top-0">
+            <div className="flex overflow-hidden">
+                <div className="hidden md:block w-1/6 p-8">
                     <div class="bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded m-4">
                         Answer
                     </div>
@@ -38,6 +38,7 @@ const Query = () => {
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
                        </span>
+                       <div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -56,7 +57,7 @@ const Query = () => {
                     <div className='p-1 w-auto text-4m md:text-2xl'>
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
-                       </span>
+                       </span><div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -75,7 +76,7 @@ const Query = () => {
                     <div className='p-1 w-auto text-4m md:text-2xl'>
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
-                       </span>
+                       </span><div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -94,7 +95,7 @@ const Query = () => {
                     <div className='p-1 w-auto text-4m md:text-2xl'>
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
-                       </span>
+                       </span><div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -113,7 +114,7 @@ const Query = () => {
                     <div className='p-1 w-auto text-4m md:text-2xl'>
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
-                       </span>
+                       </span><div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -132,7 +133,7 @@ const Query = () => {
                     <div className='p-1 w-auto text-4m md:text-2xl'>
                         <span className="ml-2">
                        weihfwehfohweofi jknvmvnefovnevndjcj kdjcvjedcnoekmnc jbedvjnefovn nkjbndovnedf
-                       </span>
+                       </span><div className="text-right text-gray-500">-- author date</div>
                     </div>
                     <div className="px-4 mx-6">
                     <button class="bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4">Upvote 5</button> 
@@ -146,7 +147,22 @@ const Query = () => {
                 </div>
 
             </div>
+            {/* <div class="bg-black  max-w-sm rounded overflow-hidden shadow-lg">
+            <img class="w-full" src="/img/card-top.jpg" alt="Sunset in the mountains"/>
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                <p class="text-gray-700 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+                </p>
             </div>
+            <div class="px-6 py-4">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+            </div>
+            </div> */}
+            </div>
+            
         </Layout>
         
     )

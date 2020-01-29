@@ -4,7 +4,7 @@ const Header = () =>
 {
     return (
         
-    <header className="bg-gray-100 text-gray-800 px-1 md:px-4  ">
+    <header className="bg-gray-100 text-gray-800 px-1 md:px-4  sticky top-0 z-2">
     <div className="py-4 flex whitespace-no-wrap justify-around">
     <div className="">
     <button type="button" className="block  text-white-500  focus:text-gray focus:outline-none">
