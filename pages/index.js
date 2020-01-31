@@ -4,23 +4,30 @@ import Layout from '../pages/Layout';
 import Home from '../pages/home';
 import Header from './header';
 import Personal from '../pages/personal-Info';
-import Query from '../pages/querypage';
+import Query from '../pages/questionspage';
+
 
 import Router , {useRouter} from 'next/router'
+import QueryWithAns from '../pages/questionWithAnswers';
+import { Component } from 'react';
 
 const click = () =>{
    
 };
 
-export default function Index() {
+export default class Index extends Component{
+
+ 
+
+  render(){
     return (
       <>
       
-        <Query/>
+        <Home/>
       
         
         </>
     );
   }
 
-
+}

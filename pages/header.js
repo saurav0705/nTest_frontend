@@ -1,7 +1,61 @@
 import Link from 'next/link';
 import Layout from '../pages/Layout';
-const Header = () =>
+import { Component } from 'react';
+import ls from 'local-storage';
+import { urlOfImages } from './images';
+import  Router  from 'next/router';
+
+class Header extends Component
 {
+    constructor(props){
+        super(props);
+        this.state = {
+            loggedIn:false,
+            Search : false,
+            SearchInput : ''
+        }
+        this.handleChange = this.handleChange.bind(this)
+    }
+    handleChange (event) {
+        this.setState({ SearchInput : event.target.value })
+      }
+    async componentDidMount(){
+        await this.setState({'loggedIn':ls.get('loggedIn')});
+        console.log(this.state.loggedIn);
+        console.log(ls.get('loggedIn'));
+    }
+
+    async logout()
+    {
+        await localStorage.setItem('loggedIn','false');
+        await localStorage.setItem('token','none');
+        await this.setState({'loggedIn':ls.get('loggedIn')});
+        Router.push('/');
+        console.log('logout triggered');
+    }
+
+    profile()
+    {
+        Router.push('/personal-Info');
+    }
+
+    toggleSearch(){
+        this.setState({
+            Search: !this.state.Search
+        })
+    }
+
+    search()
+    {
+        var code = event.keyCode || event.which;
+    if(code === 13) { //13 is the enter keycode
+        console.log(this.state.SearchInput);
+        this.toggleSearch();
+        localStorage.setItem('query',this.state.SearchInput);
+        Router.push('/questionspage');
+    } 
+    }
+    render(){
     return (
         
     <header className="bg-gray-100 text-gray-800 px-1 md:px-4  sticky top-0 z-2">
@@ -51,13 +105,15 @@ const Header = () =>
         </button>
     </div>
     <div>
-    <input className="w-5/6 hidden md:block bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4  w-full appearance-none leading-normal" type="text" placeholder="Search" />
-    <img src="data:image/png;base64,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" className="h-6 block md:hidden"/>
+    <input value={this.state.SearchInput} onKeyPress={()=>this.search()} onChange={this.handleChange} className="w-5/6 hidden md:block bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4  w-full appearance-none leading-normal" type="text" placeholder="Search" />
+    <img onClick={()=>this.toggleSearch()} src="data:image/png;base64,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" className="h-6 block md:hidden"/>
     <div>
-    <input className=" w-screen z-1 px-8 absolute hidden bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4  w-full appearance-none leading-normal" type="text" placeholder="Search" />
+        <div className={this.state.Search ? 'block':'hidden'}>
+    <input value={this.state.SearchInput} onKeyPress={()=>this.search()} onChange={this.handleChange} className=" w-screen z-1 px-8 absolute left-0 top-10 mt-5 border-3 block md:hidden bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4  w-full appearance-none leading-normal" type="text" placeholder="Search" />
     </div>
     </div>
-    <div className="flex">
+    </div>
+    <div className={this.state.loggedIn ? 'hidden':'flex'}>
     <div>
         <Link href='/signupAndLogin/login'>
         <button className="text-xs md:text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Log In</button>
@@ -69,10 +125,18 @@ const Header = () =>
         </Link>
     </div>
     </div>
+    <div className={this.state.loggedIn ? 'flex':'hidden'}>
+        <div>
+        <img className="block h-8 mr-1 md:mt-2 rounded-full" src={urlOfImages.user} onClick={()=>{this.profile()}}/>    
+        </div>
+        <div className="ml-1">
+        <button className="text-xs md:text-xl bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" onClick={()=>{this.logout()}}>Log Out</button>
+        </div>
+    </div>
     </div>
    
   </header>
   );
 };
-
+}
 export default Header;

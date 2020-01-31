@@ -13,7 +13,7 @@ const Options = () => {
                         Browse Questions
                         </button>
             </div>
-            <div className="max-w-sm rounded overflow-hidden m-4 md:-mt-4 border shadow-lg m-4 h-auto p-4">
+            <div className="max-w-sm rounded overflow-hidden m-4 md:-mt-4  md:mb-8 border shadow-lg m-4 h-auto p-4">
                 
             <img className="w-full  object-cover p-5" align="middle" src="https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f"/>
                 <div className="text-xl ">Private Q&A
