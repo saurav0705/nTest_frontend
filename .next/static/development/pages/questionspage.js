@@ -1,4 +1,15 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\questionWithAnswers.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\questionspage.js"],{
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "./node_modules/core-js/library/fn/array/from.js");
+
+/***/ }),
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -304,6 +315,31 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithoutHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
@@ -432,6 +468,44 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _iterableToArray(iter) {
+  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
@@ -476,6 +550,28 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 /***/ }),
@@ -820,6 +916,20 @@ module.exports = _typeof;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/array/from.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/library/fn/array/from.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../../modules/es6.array.from */ "./node_modules/core-js/library/modules/es6.array.from.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Array.from;
 
 
 /***/ }),
@@ -1715,6 +1825,26 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 var core = module.exports = { version: '2.6.11' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/_create-property.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_create-property.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $defineProperty = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/library/modules/_object-dp.js");
+var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/library/modules/_property-desc.js");
+
+module.exports = function (object, index, value) {
+  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
+  else object[index] = value;
+};
 
 
 /***/ }),
@@ -3538,6 +3668,55 @@ module.exports = __webpack_require__(/*! ./_core */ "./node_modules/core-js/libr
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es6.array.from.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.array.from.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/library/modules/_ctx.js");
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/library/modules/_to-object.js");
+var call = __webpack_require__(/*! ./_iter-call */ "./node_modules/core-js/library/modules/_iter-call.js");
+var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ "./node_modules/core-js/library/modules/_is-array-iter.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/library/modules/_to-length.js");
+var createProperty = __webpack_require__(/*! ./_create-property */ "./node_modules/core-js/library/modules/_create-property.js");
+var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ "./node_modules/core-js/library/modules/core.get-iterator-method.js");
+
+$export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ "./node_modules/core-js/library/modules/_iter-detect.js")(function (iter) { Array.from(iter); }), 'Array', {
+  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
+  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
+    var O = toObject(arrayLike);
+    var C = typeof this == 'function' ? this : Array;
+    var aLen = arguments.length;
+    var mapfn = aLen > 1 ? arguments[1] : undefined;
+    var mapping = mapfn !== undefined;
+    var index = 0;
+    var iterFn = getIterFn(O);
+    var length, result, step, iterator;
+    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
+    // if object isn't iterable or it's array with default iterator - use simple case
+    if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
+      for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
+        createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
+      }
+    } else {
+      length = toLength(O.length);
+      for (result = new C(length); length > index; index++) {
+        createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
+      }
+    }
+    result.length = index;
+    return result;
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es6.array.is-array.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.array.is-array.js ***!
@@ -4994,21 +5173,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js!./":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js ***!
-  \************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestionspage&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cquestionspage.js!./":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestionspage&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cquestionspage.js ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/questionWithAnswers", function() {
-      var mod = __webpack_require__(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/questionspage", function() {
+      var mod = __webpack_require__(/*! ./pages/questionspage.js */ "./pages/questionspage.js")
       if(true) {
-        module.hot.accept(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js", function() {
-          if(!next.router.components["/questionWithAnswers"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js")
-          next.router.update("/questionWithAnswers", updatedPage)
+        module.hot.accept(/*! ./pages/questionspage.js */ "./pages/questionspage.js", function() {
+          if(!next.router.components["/questionspage"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/questionspage.js */ "./pages/questionspage.js")
+          next.router.update("/questionspage", updatedPage)
         })
       }
       return mod
@@ -10633,10 +10812,10 @@ var urlOfImages = {
 
 /***/ }),
 
-/***/ "./pages/questionWithAnswers.js":
-/*!**************************************!*\
-  !*** ./pages/questionWithAnswers.js ***!
-  \**************************************/
+/***/ "./pages/questionspage.js":
+/*!********************************!*\
+  !*** ./pages/questionspage.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10646,20 +10825,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
 /* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
-/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./images */ "./pages/images.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! local-storage */ "./node_modules/local-storage/local-storage.js");
-/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images */ "./pages/images.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! local-storage */ "./node_modules/local-storage/local-storage.js");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_14__);
 
 
 
@@ -10668,38 +10850,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionWithAnswers.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionspage.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
 
 
 
 
 
 
-var QueryWithAns =
+
+var Query =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__["default"])(QueryWithAns, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Query, _Component);
 
-  function QueryWithAns() {
+  function Query() {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, QueryWithAns);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Query);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(QueryWithAns).call(this));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Query).call(this));
     _this.state = {
-      question: {},
+      questionList: [],
       answers: [],
-      loggedIn: false,
-      objId: '',
-      form: false,
-      quesbox: ''
+      questionBox: false,
+      quesbox: '',
+      query: ''
     };
-    _this.handleChange = _this.handleChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
+    _this.handleChange = _this.handleChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(QueryWithAns, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Query, [{
     key: "handleChange",
     value: function handleChange(event) {
       this.setState({
@@ -10709,492 +10892,287 @@ function (_Component) {
   }, {
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function componentDidMount$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              if (!local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('loggedIn')) {
-                _context.next = 3;
-                break;
-              }
-
-              _context.next = 3;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(this.setState({
-                'loggedIn': true
-              }));
-
-            case 3:
-              this.show();
-
-            case 4:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, null, this);
-    }
-  }, {
-    key: "upvote",
-    value: function upvote(id) {
-      var url, response, data;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function upvote$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              url = 'http://localhost:8000/answers/' + id + '/upvote';
-              _context2.prev = 1;
-              _context2.next = 4;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default()(url, {
-                method: 'GET',
-                headers: {
-                  'Content-Type': 'application/json',
-                  "Access-Control-Allow-Origin": '*',
-                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('token')
-                }
-              }));
-
-            case 4:
-              response = _context2.sent;
-
-              if (!response.ok) {
-                _context2.next = 14;
-                break;
-              }
-
-              _context2.next = 8;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(response.json());
-
-            case 8:
-              data = _context2.sent;
-              console.log("data----------- ", data);
-              console.log(response);
-              this.componentDidMount(); //   await this.setState({
-              //       user:data.user
-              //   })
-
-              _context2.next = 15;
-              break;
-
-            case 14:
-              alert('unable to fetch');
-
-            case 15:
-              _context2.next = 21;
-              break;
-
-            case 17:
-              _context2.prev = 17;
-              _context2.t0 = _context2["catch"](1);
-              console.error('You have an error in your code or there are Network issues.', _context2.t0);
-              throw new Error(_context2.t0);
-
-            case 21:
-              console.log('up----------------------', id);
-
-            case 22:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, null, this, [[1, 17]]);
-    }
-  }, {
-    key: "downvote",
-    value: function downvote(id) {
-      var url, response, data;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function downvote$(_context3) {
-        while (1) {
-          switch (_context3.prev = _context3.next) {
-            case 0:
-              url = 'http://localhost:8000/answers/' + id + '/downvote';
-              _context3.prev = 1;
-              _context3.next = 4;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default()(url, {
-                method: 'GET',
-                headers: {
-                  'Content-Type': 'application/json',
-                  "Access-Control-Allow-Origin": '*',
-                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('token')
-                }
-              }));
-
-            case 4:
-              response = _context3.sent;
-
-              if (!response.ok) {
-                _context3.next = 14;
-                break;
-              }
-
-              _context3.next = 8;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(response.json());
-
-            case 8:
-              data = _context3.sent;
-              console.log("data----------- ", data);
-              console.log(response);
-              this.componentDidMount(); //   await this.setState({
-              //       user:data.user
-              //   })
-
-              _context3.next = 15;
-              break;
-
-            case 14:
-              alert('unable to fetch');
-
-            case 15:
-              _context3.next = 21;
-              break;
-
-            case 17:
-              _context3.prev = 17;
-              _context3.t0 = _context3["catch"](1);
-              console.error('You have an error in your code or there are Network issues.', _context3.t0);
-              throw new Error(_context3.t0);
-
-            case 21:
-              console.log('down-----------------------', id);
-
-            case 22:
-            case "end":
-              return _context3.stop();
-          }
-        }
-      }, null, this, [[1, 17]]);
-    }
-  }, {
-    key: "show",
-    value: function show() {
-      var _this2 = this;
-
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function show$(_context4) {
-        while (1) {
-          switch (_context4.prev = _context4.next) {
-            case 0:
-              _context4.next = 2;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default()('http://localhost:8000/questions/' + local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('obj_id')).then(function (response) {
+              _context.next = 2;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()('http://localhost:8000/questions/').then(function (response) {
                 return response.json();
               }).then(function (res) {
-                console.log('test---------------- ', res);
-
-                if (res.question) {
-                  _this2.setState({
-                    question: res.question
-                  });
-
-                  if (_this2.state.question.answers) {
-                    _this2.setState({
-                      answers: _this2.state.question.answers
-                    });
-                  }
-                }
-
                 _this2.setState({
-                  'objId': local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('obj_id')
+                  questionList: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(res.questionList)
                 });
               }));
 
             case 2:
             case "end":
-              return _context4.stop();
+              return _context.stop();
           }
         }
       });
     }
   }, {
-    key: "submitanswer",
-    value: function submitanswer() {
+    key: "questionDetails",
+    value: function questionDetails(obj) {
+      localStorage.setItem('obj_id', obj);
+      next_router__WEBPACK_IMPORTED_MODULE_13___default.a.push('/questionWithAnswers');
+    }
+  }, {
+    key: "renderQuestion",
+    value: function renderQuestion() {
+      var _this3 = this;
+
+      if (!this.state.questionList || this.state.questionList.length === 0) {
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, __jsx("div", {
+          className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, "NOTHING FOUND"));
+      }
+
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, this.state.questionList.map(function (question) {
+        return __jsx("div", {
+          className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+          onClick: function onClick() {
+            return _this3.questionDetails(question._id);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          },
+          __self: this
+        }, __jsx("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          },
+          __self: this
+        }, "Q."), "   ", question.question);
+      }));
+    }
+  }, {
+    key: "openQuestionDialog",
+    value: function openQuestionDialog() {
+      this.setState({
+        questionBox: !this.state.questionBox
+      });
+    }
+  }, {
+    key: "submitquestion",
+    value: function submitquestion() {
       var url, response, data;
-      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function submitanswer$(_context5) {
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function submitquestion$(_context2) {
         while (1) {
-          switch (_context5.prev = _context5.next) {
+          switch (_context2.prev = _context2.next) {
             case 0:
               console.log('called');
-              url = 'http://localhost:8000/questions/' + this.state.objId + '/answer';
-              _context5.prev = 2;
-              _context5.next = 5;
-              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default()(url, {
+              console.log(this.state.quesbox);
+              url = 'http://localhost:8000/questions';
+              _context2.prev = 3;
+              _context2.next = 6;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()(url, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
                   "Access-Control-Allow-Origin": '*',
-                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_12___default.a.get('token')
+                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('token')
                 },
                 body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
-                  answer: this.state.quesbox
+                  question: this.state.quesbox
                 })
               }));
 
-            case 5:
-              response = _context5.sent;
+            case 6:
+              response = _context2.sent;
 
               if (!response.ok) {
-                _context5.next = 16;
+                _context2.next = 17;
                 break;
               }
 
-              _context5.next = 9;
+              _context2.next = 10;
               return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(response.json());
 
-            case 9:
-              data = _context5.sent;
+            case 10:
+              data = _context2.sent;
               console.log("data----------- ", data);
               console.log(response);
-              this.toggleBox();
+              this.openQuestionDialog();
               this.componentDidMount(); //   await this.setState({
               //       user:data.user
               //   })
 
-              _context5.next = 17;
+              _context2.next = 18;
               break;
-
-            case 16:
-              alert('unable to fetch');
 
             case 17:
-              _context5.next = 23;
+              alert('unable to fetch');
+
+            case 18:
+              _context2.next = 24;
               break;
 
-            case 19:
-              _context5.prev = 19;
-              _context5.t0 = _context5["catch"](2);
-              console.error('You have an error in your code or there are Network issues.', _context5.t0);
-              throw new Error(_context5.t0);
+            case 20:
+              _context2.prev = 20;
+              _context2.t0 = _context2["catch"](3);
+              console.error('You have an error in your code or there are Network issues.', _context2.t0);
+              throw new Error(_context2.t0);
 
-            case 23:
+            case 24:
             case "end":
-              return _context5.stop();
+              return _context2.stop();
           }
         }
-      }, null, this, [[2, 19]]);
+      }, null, this, [[3, 20]]);
     }
   }, {
-    key: "renderAnswer",
-    value: function renderAnswer() {
-      var _this3 = this;
+    key: "test",
+    value: function test() {
+      var _this4 = this;
 
-      if (this.state.answers && this.state.answers.length > 0) {
-        return __jsx("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 145
-          },
-          __self: this
-        }, this.state.answers.map(function (answer) {
-          return __jsx("div", {
-            className: "flex justify-center bg-green-300 p-4 m-4",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 146
-            },
-            __self: this
-          }, __jsx("div", {
-            className: "block md:flex justify-center w-full",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 147
-            },
-            __self: this
-          }, __jsx("div", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 148
-            },
-            __self: this
-          }, __jsx("center", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 148
-            },
-            __self: this
-          }, __jsx("img", {
-            src: _images__WEBPACK_IMPORTED_MODULE_10__["urlOfImages"].answer,
-            className: "h-6 mt-5",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 149
-            },
-            __self: this
-          }))), __jsx("div", {
-            className: "p-1 w-auto text-4m md:text-2xl",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 152
-            },
-            __self: this
-          }, __jsx("span", {
-            className: "ml-2",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 153
-            },
-            __self: this
-          }, answer.answer), __jsx("div", {
-            className: "text-right text-gray-500",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 156
-            },
-            __self: this
-          }, "-- ", answer.author.name)), __jsx("div", {
-            className: _this3.state.loggedIn ? 'block p-6' : 'hidden p-6',
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 158
-            },
-            __self: this
-          }, __jsx("button", {
-            onClick: function onClick() {
-              return _this3.upvote(answer._id);
-            },
-            className: "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 159
-            },
-            __self: this
-          }, "Upvote ", answer.upvote.length), __jsx("button", {
-            onClick: function onClick() {
-              return _this3.downvote(answer._id);
-            },
-            className: "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 161
-            },
-            __self: this
-          }, "Downvote ", answer.downvote.length))));
-        }));
-      } else {
-        return __jsx("div", {
-          className: "flex justify-center bg-green-300 p-4 m-4 text-2xl",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 167
-          },
-          __self: this
-        }, "NO ONE ANSWERED IT YET");
-      }
-    }
-  }, {
-    key: "toggleBox",
-    value: function toggleBox() {
-      this.setState({
-        form: !this.state.form
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function test$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query') && local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query').length > 0)) {
+                _context3.next = 6;
+                break;
+              }
+
+              console.log('tetsing sucess ----------------- ', local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query'));
+              _context3.next = 4;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()('http://localhost:8000/questions/search/' + local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query')).then(function (response) {
+                return response.json();
+              }).then(function (res) {
+                console.log(res);
+
+                _this4.setState({
+                  questionList: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(res.questionList)
+                });
+
+                localStorage.setItem('query', '');
+              }));
+
+            case 4:
+              _context3.next = 7;
+              break;
+
+            case 6:
+              return _context3.abrupt("return");
+
+            case 7:
+            case "end":
+              return _context3.stop();
+          }
+        }
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this4 = this;
+      var _this5 = this;
 
-      return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      this.test();
+      return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_10__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 121
         },
         __self: this
       }, __jsx("div", {
-        className: this.state.form ? 'hidden' : 'block',
+        className: this.state.questionBox ? 'hidden' : 'block',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 122
         },
         __self: this
       }, __jsx("div", {
         className: "flex overflow-hidden",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 123
         },
         __self: this
       }, __jsx("div", {
-        className: "fixed top-10  left-3 md:relative md:w-1/6 p-6 -ml-6",
+        className: "fixed bottom-3 right-3 md:block  p-0 md:p-8",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 124
         },
         __self: this
       }, __jsx("div", {
+        className: " w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        },
+        __self: this
+      }, __jsx("img", {
+        src: _images__WEBPACK_IMPORTED_MODULE_11__["urlOfImages"].question,
+        className: "h-8 rounded-full inline-block",
         onClick: function onClick() {
-          return _this4.toggleBox();
+          _this5.openQuestionDialog();
         },
-        className: "bg-blue-500 hover:bg-blue-700 w-full text-white font-bold p-1 px-4 -ml-3 md:py-2 md:px-4 rounded m-1 md:m-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
-        },
-        __self: this
-      }, __jsx("span", {
-        className: this.state.loggedIn ? 'block' : 'hidden',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 126
         },
         __self: this
-      }, "Answer"))), __jsx("div", {
-        className: "block text-center  border-gray-600 w-screen md:w-5/6",
+      }), __jsx("span", {
+        className: "hidden md:block ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 126
         },
         __self: this
-      }, __jsx("div", {
-        className: "text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+      }, " Ask A Question"))), __jsx("div", {
+        className: "block text-center  border-gray-600 w-screen ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 132
         },
         __self: this
-      }, __jsx("b", {
+      }, this.renderQuestion()))), __jsx("div", {
+        className: this.state.questionBox ? 'block' : 'hidden',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
-        },
-        __self: this
-      }, "Q."), "   ", this.state.question.question), __jsx("div", {
-        className: "text-2xl bg-green-500 p-8 text-white",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 197
-        },
-        __self: this
-      }, "Answers", this.renderAnswer())))), __jsx("div", {
-        className: this.state.form ? 'block' : 'hidden',
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 138
         },
         __self: this
       }, __jsx("center", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 139
         },
         __self: this
       }, __jsx("div", {
         className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 140
         },
         __self: this
       }, __jsx("div", {
         className: "px-4 py-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 142
         },
         __self: this
       }, __jsx("div", {
         className: "font-bold text-xl mb-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 211
+          lineNumber: 143
         },
         __self: this
-      }, "Write Your Answer Here"), __jsx("textarea", {
+      }, "Write Your Question Here"), __jsx("textarea", {
         value: this.state.quesbox,
         onChange: this.handleChange,
         className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
@@ -11204,38 +11182,38 @@ function (_Component) {
         rows: "6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 145
         },
         __self: this
       }), __jsx("button", {
         className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4",
         onClick: function onClick() {
-          return _this4.submitanswer();
+          return _this5.submitquestion();
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 146
         },
         __self: this
       }, "Submit Question"))))));
     }
   }]);
 
-  return QueryWithAns;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
+  return Query;
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (QueryWithAns);
+/* harmony default export */ __webpack_exports__["default"] = (Query);
 
 /***/ }),
 
-/***/ 5:
-/*!****************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js ***!
-  \****************************************************************************************************************************************************************************/
+/***/ 4:
+/*!****************************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fquestionspage&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cquestionspage.js ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fquestionspage&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cquestionspage.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fquestionspage&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cquestionspage.js!./");
 
 
 /***/ }),
@@ -11251,5 +11229,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=questionWithAnswers.js.map
+},[[4,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=questionspage.js.map

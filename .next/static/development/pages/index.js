@@ -1,4 +1,15 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\questionWithAnswers.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "./node_modules/core-js/library/fn/array/from.js");
+
+/***/ }),
 
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
 /*!***********************************************************************!*\
@@ -304,6 +315,31 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithoutHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
@@ -432,6 +468,44 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
+/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
+/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _iterableToArray(iter) {
+  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
@@ -476,6 +550,28 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
+/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 /***/ }),
@@ -820,6 +916,20 @@ module.exports = _typeof;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/array/from.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/library/fn/array/from.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.string.iterator */ "./node_modules/core-js/library/modules/es6.string.iterator.js");
+__webpack_require__(/*! ../../modules/es6.array.from */ "./node_modules/core-js/library/modules/es6.array.from.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Array.from;
 
 
 /***/ }),
@@ -1715,6 +1825,26 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 var core = module.exports = { version: '2.6.11' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/_create-property.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/_create-property.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $defineProperty = __webpack_require__(/*! ./_object-dp */ "./node_modules/core-js/library/modules/_object-dp.js");
+var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/core-js/library/modules/_property-desc.js");
+
+module.exports = function (object, index, value) {
+  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
+  else object[index] = value;
+};
 
 
 /***/ }),
@@ -3538,6 +3668,55 @@ module.exports = __webpack_require__(/*! ./_core */ "./node_modules/core-js/libr
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es6.array.from.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/library/modules/es6.array.from.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ctx = __webpack_require__(/*! ./_ctx */ "./node_modules/core-js/library/modules/_ctx.js");
+var $export = __webpack_require__(/*! ./_export */ "./node_modules/core-js/library/modules/_export.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/library/modules/_to-object.js");
+var call = __webpack_require__(/*! ./_iter-call */ "./node_modules/core-js/library/modules/_iter-call.js");
+var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ "./node_modules/core-js/library/modules/_is-array-iter.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/library/modules/_to-length.js");
+var createProperty = __webpack_require__(/*! ./_create-property */ "./node_modules/core-js/library/modules/_create-property.js");
+var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ "./node_modules/core-js/library/modules/core.get-iterator-method.js");
+
+$export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ "./node_modules/core-js/library/modules/_iter-detect.js")(function (iter) { Array.from(iter); }), 'Array', {
+  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
+  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
+    var O = toObject(arrayLike);
+    var C = typeof this == 'function' ? this : Array;
+    var aLen = arguments.length;
+    var mapfn = aLen > 1 ? arguments[1] : undefined;
+    var mapping = mapfn !== undefined;
+    var index = 0;
+    var iterFn = getIterFn(O);
+    var length, result, step, iterator;
+    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
+    // if object isn't iterable or it's array with default iterator - use simple case
+    if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
+      for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
+        createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
+      }
+    } else {
+      length = toLength(O.length);
+      for (result = new C(length); length > index; index++) {
+        createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
+      }
+    }
+    result.length = index;
+    return result;
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es6.array.is-array.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/library/modules/es6.array.is-array.js ***!
@@ -4994,21 +5173,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js!./":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js ***!
-  \************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js!./":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/questionWithAnswers", function() {
-      var mod = __webpack_require__(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js", function() {
-          if(!next.router.components["/questionWithAnswers"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/questionWithAnswers.js */ "./pages/questionWithAnswers.js")
-          next.router.update("/questionWithAnswers", updatedPage)
+        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          next.router.update("/", updatedPage)
         })
       }
       return mod
@@ -10607,6 +10786,309 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./pages/home.js":
+/*!***********************!*\
+  !*** ./pages/home.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _home_banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home/banner */ "./pages/home/banner.js");
+/* harmony import */ var _home_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home/options */ "./pages/home/options.js");
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+var Home = function Home() {
+  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx(_home_banner__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), __jsx(_home_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./pages/home/banner.js":
+/*!******************************!*\
+  !*** ./pages/home/banner.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home\\banner.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var Banner = function Banner() {
+  return __jsx("div", {
+    className: " bg-yellow-500 py-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex-row content-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "flex justify-center m-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, __jsx("h1", {
+    className: "text-6xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "We <3 people who code")))), __jsx("div", {
+    className: "text-2xl flex justify-center m-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.")), __jsx("div", {
+    className: "block md:flex xl:flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, __jsx("button", {
+    className: "bg-white  w-15 m-2 border border-orange-500 text-orange-500  py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
+  }, "For Developers")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx("button", {
+    className: "bg-orange-500 w-15 border text-white  py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "For Buisnesses"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Banner);
+
+/***/ }),
+
+/***/ "./pages/home/options.js":
+/*!*******************************!*\
+  !*** ./pages/home/options.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home\\options.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+var Options = function Options() {
+  return __jsx("div", {
+    className: "block md:flex justify-center text-center mt-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "max-w-sm  rounded overflow-hidden border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "text-xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, "Public Q&A"), __jsx("div", {
+    className: "text-3l  p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account."), __jsx("button", {
+    className: "bg-blue-800 m-2  text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Browse Questions")), __jsx("div", {
+    className: "max-w-sm rounded overflow-hidden m-4 md:-mt-4  md:mb-8 border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "text-xl ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, "Private Q&A"), __jsx("div", {
+    className: "text-3l p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, "Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine."), __jsx("button", {
+    className: "bg-orange-500 m-2  text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Try For Free")), __jsx("div", {
+    className: "max-w-sm rounded overflow-hidden border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "text-xl ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, "Browse Jobs"), __jsx("div", {
+    className: "text-3l p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, "Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more."), __jsx("button", {
+    className: "bg-blue-800 m-2 text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Find A Job")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Options);
+
+/***/ }),
+
 /***/ "./pages/images.js":
 /*!*************************!*\
   !*** ./pages/images.js ***!
@@ -10630,6 +11112,453 @@ var urlOfImages = {
   'downvote': 'data:image/png;base64,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',
   'question': 'https://lh3.googleusercontent.com/proxy/e-Gwn9DYpsYZDiY33rTCdgwQacPKcZ7v0rvJy99vLkbakZZCampxyTvgOc19wZdq1WECobq9ozAKeKpx61sFewp8ZBXGkKifTUrE2cgM'
 };
+
+/***/ }),
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/main.css */ "./styles/main.css");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _pages_Layout__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../pages/Layout */ "./pages/Layout.js");
+/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/home */ "./pages/home.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./header */ "./pages/header.js");
+/* harmony import */ var _pages_personal_Info__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pages/personal-Info */ "./pages/personal-Info.js");
+/* harmony import */ var _pages_questionspage__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../pages/questionspage */ "./pages/questionspage.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _pages_questionWithAnswers__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../pages/questionWithAnswers */ "./pages/questionWithAnswers.js");
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+var click = function click() {};
+
+var Index =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Index, _Component);
+
+  function Index() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Index);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Index).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Index, [{
+    key: "render",
+    value: function render() {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, __jsx(_pages_home__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }));
+    }
+  }]);
+
+  return Index;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+
+
+/***/ }),
+
+/***/ "./pages/personal-Info.js":
+/*!********************************!*\
+  !*** ./pages/personal-Info.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images */ "./pages/images.js");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! local-storage */ "./node_modules/local-storage/local-storage.js");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\personal-Info.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
+
+
+
+
+
+
+
+var Personal =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Personal, _Component);
+
+  function Personal(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Personal);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Personal).call(this, props));
+    _this.state = {
+      user: {}
+    };
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Personal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var url, response, data;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function componentDidMount$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (!local_storage__WEBPACK_IMPORTED_MODULE_9___default.a.get('loggedIn')) {
+                next_router__WEBPACK_IMPORTED_MODULE_10___default.a.push('/');
+              }
+
+              url = 'http://localhost:8000/users/info';
+              _context.prev = 2;
+              _context.next = 5;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_11___default()(url, {
+                method: 'GET',
+                headers: {
+                  'Content-Type': 'application/json',
+                  "Access-Control-Allow-Origin": '*',
+                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_9___default.a.get('token')
+                }
+              }));
+
+            case 5:
+              response = _context.sent;
+
+              if (!response.ok) {
+                _context.next = 15;
+                break;
+              }
+
+              _context.next = 9;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(response.json());
+
+            case 9:
+              data = _context.sent;
+              console.log(data.user); //   console.log(response);
+
+              _context.next = 13;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(this.setState({
+                user: data.user
+              }));
+
+            case 13:
+              _context.next = 16;
+              break;
+
+            case 15:
+              alert('unable to fetch');
+
+            case 16:
+              _context.next = 22;
+              break;
+
+            case 18:
+              _context.prev = 18;
+              _context.t0 = _context["catch"](2);
+              console.error('You have an error in your code or there are Network issues.', _context.t0);
+              throw new Error(_context.t0);
+
+            case 22:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, null, this, [[2, 18]]);
+    }
+  }, {
+    key: "renderQuestions",
+    value: function renderQuestions() {
+      if (!this.state.user.questions) {
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null);
+      } else {
+        if (this.state.user.questions.length === 0) {
+          return __jsx("p", {
+            className: "text-4l m-1 bg-red-600 p-3 rounded",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 59
+            },
+            __self: this
+          }, "Well you are Very Intelligent");
+        }
+
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, this.state.user.questions.map(function (ques) {
+          return __jsx("p", {
+            className: "text-4l m-1 bg-red-600 p-3 rounded",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 63
+            },
+            __self: this
+          }, "Q. ", ques.question);
+        }));
+      }
+    }
+  }, {
+    key: "renderAnswers",
+    value: function renderAnswers() {
+      if (!this.state.user.answers) {
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null);
+      } else {
+        if (this.state.user.answers.length === 0) {
+          return __jsx("p", {
+            className: "text-4l m-1 bg-green-600 p-3 rounded",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 74
+            },
+            __self: this
+          }, "Lets Start Helping Others");
+        }
+
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, this.state.user.answers.map(function (ans) {
+          return __jsx("p", {
+            className: "text-4l m-1 bg-green-600 p-3 rounded",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 78
+            },
+            __self: this
+          }, "A. ", ans.answer);
+        }));
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, __jsx(_Layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "block md:flex justify-center p-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "p-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, __jsx("img", {
+        src: _images__WEBPACK_IMPORTED_MODULE_8__["urlOfImages"].user,
+        className: "h-auto rounded-full",
+        alt: "Profile Picture",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }), __jsx("div", {
+        className: "flex justify-center mt-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }, __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91
+        },
+        __self: this
+      }, __jsx("img", {
+        src: _images__WEBPACK_IMPORTED_MODULE_8__["urlOfImages"].copyright,
+        className: "mx-2 mt-1 h-8",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      })), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, " ", __jsx("img", {
+        src: _images__WEBPACK_IMPORTED_MODULE_8__["urlOfImages"]['stack-overflow'],
+        className: "h-8",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      })), __jsx("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, __jsx("p", {
+        className: "font-bold text-4l mb-2 mt-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, "Stack Overflow ")))), __jsx("div", {
+        className: "p-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "max-w-sm rounded border overflow-hidden shadow-lg",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "px-6 py-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "font-bold text-4xl mb-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        },
+        __self: this
+      }, this.state.user.name), __jsx("div", {
+        className: " text-2xl mb-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        },
+        __self: this
+      }, this.state.user.username), __jsx("p", {
+        className: "text-gray-700 text-base mt-5",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
+        },
+        __self: this
+      }, "Below Is the list of all the Question you asked and Answered. We very much Appreciate your contribution."), __jsx("div", {
+        className: "p-2 m-2 bg-red-400 text-white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "font-bold text-xl mb-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109
+        },
+        __self: this
+      }, "Questions Asked"), this.renderQuestions()), __jsx("div", {
+        className: "p-2 m-2 bg-green-400 text-white",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "font-bold text-xl mb-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114
+        },
+        __self: this
+      }, "Questions Answered"), this.renderAnswers()), __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }))), __jsx("div", {
+        className: "flex justify-center m-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, __jsx("button", {
+        className: "bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }, "Edit"))))));
+    }
+  }]);
+
+  return Personal;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Personal);
 
 /***/ }),
 
@@ -11228,14 +12157,408 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
-/*!****************************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js ***!
-  \****************************************************************************************************************************************************************************/
+/***/ "./pages/questionspage.js":
+/*!********************************!*\
+  !*** ./pages/questionspage.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./images */ "./pages/images.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! local-storage */ "./node_modules/local-storage/local-storage.js");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_14__);
+
+
+
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionspage.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement;
+
+
+
+
+
+
+
+var Query =
+/*#__PURE__*/
+function (_Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_8__["default"])(Query, _Component);
+
+  function Query() {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Query);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__["default"])(Query).call(this));
+    _this.state = {
+      questionList: [],
+      answers: [],
+      questionBox: false,
+      quesbox: '',
+      query: ''
+    };
+    _this.handleChange = _this.handleChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_7__["default"])(_this));
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_4__["default"])(Query, [{
+    key: "handleChange",
+    value: function handleChange(event) {
+      this.setState({
+        quesbox: event.target.value
+      });
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function componentDidMount$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()('http://localhost:8000/questions/').then(function (response) {
+                return response.json();
+              }).then(function (res) {
+                _this2.setState({
+                  questionList: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(res.questionList)
+                });
+              }));
+
+            case 2:
+            case "end":
+              return _context.stop();
+          }
+        }
+      });
+    }
+  }, {
+    key: "questionDetails",
+    value: function questionDetails(obj) {
+      localStorage.setItem('obj_id', obj);
+      next_router__WEBPACK_IMPORTED_MODULE_13___default.a.push('/questionWithAnswers');
+    }
+  }, {
+    key: "renderQuestion",
+    value: function renderQuestion() {
+      var _this3 = this;
+
+      if (!this.state.questionList || this.state.questionList.length === 0) {
+        return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, __jsx("div", {
+          className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
+        }, "NOTHING FOUND"));
+      }
+
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, this.state.questionList.map(function (question) {
+        return __jsx("div", {
+          className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+          onClick: function onClick() {
+            return _this3.questionDetails(question._id);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          },
+          __self: this
+        }, __jsx("b", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51
+          },
+          __self: this
+        }, "Q."), "   ", question.question);
+      }));
+    }
+  }, {
+    key: "openQuestionDialog",
+    value: function openQuestionDialog() {
+      this.setState({
+        questionBox: !this.state.questionBox
+      });
+    }
+  }, {
+    key: "submitquestion",
+    value: function submitquestion() {
+      var url, response, data;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function submitquestion$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              console.log('called');
+              console.log(this.state.quesbox);
+              url = 'http://localhost:8000/questions';
+              _context2.prev = 3;
+              _context2.next = 6;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()(url, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  "Access-Control-Allow-Origin": '*',
+                  'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('token')
+                },
+                body: _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_0___default()({
+                  question: this.state.quesbox
+                })
+              }));
+
+            case 6:
+              response = _context2.sent;
+
+              if (!response.ok) {
+                _context2.next = 17;
+                break;
+              }
+
+              _context2.next = 10;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(response.json());
+
+            case 10:
+              data = _context2.sent;
+              console.log("data----------- ", data);
+              console.log(response);
+              this.openQuestionDialog();
+              this.componentDidMount(); //   await this.setState({
+              //       user:data.user
+              //   })
+
+              _context2.next = 18;
+              break;
+
+            case 17:
+              alert('unable to fetch');
+
+            case 18:
+              _context2.next = 24;
+              break;
+
+            case 20:
+              _context2.prev = 20;
+              _context2.t0 = _context2["catch"](3);
+              console.error('You have an error in your code or there are Network issues.', _context2.t0);
+              throw new Error(_context2.t0);
+
+            case 24:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, null, this, [[3, 20]]);
+    }
+  }, {
+    key: "test",
+    value: function test() {
+      var _this4 = this;
+
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.async(function test$(_context3) {
+        while (1) {
+          switch (_context3.prev = _context3.next) {
+            case 0:
+              if (!(local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query') && local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query').length > 0)) {
+                _context3.next = 6;
+                break;
+              }
+
+              console.log('tetsing sucess ----------------- ', local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query'));
+              _context3.next = 4;
+              return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.awrap(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_12___default()('http://localhost:8000/questions/search/' + local_storage__WEBPACK_IMPORTED_MODULE_14___default.a.get('query')).then(function (response) {
+                return response.json();
+              }).then(function (res) {
+                console.log(res);
+
+                _this4.setState({
+                  questionList: Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__["default"])(res.questionList)
+                });
+
+                localStorage.setItem('query', '');
+              }));
+
+            case 4:
+              _context3.next = 7;
+              break;
+
+            case 6:
+              return _context3.abrupt("return");
+
+            case 7:
+            case "end":
+              return _context3.stop();
+          }
+        }
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this5 = this;
+
+      this.test();
+      return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
+        },
+        __self: this
+      }, __jsx("div", {
+        className: this.state.questionBox ? 'hidden' : 'block',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "flex overflow-hidden",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "fixed bottom-3 right-3 md:block  p-0 md:p-8",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }, __jsx("div", {
+        className: " w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        },
+        __self: this
+      }, __jsx("img", {
+        src: _images__WEBPACK_IMPORTED_MODULE_11__["urlOfImages"].question,
+        className: "h-8 rounded-full inline-block",
+        onClick: function onClick() {
+          _this5.openQuestionDialog();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }), __jsx("span", {
+        className: "hidden md:block ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, " Ask A Question"))), __jsx("div", {
+        className: "block text-center  border-gray-600 w-screen ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132
+        },
+        __self: this
+      }, this.renderQuestion()))), __jsx("div", {
+        className: this.state.questionBox ? 'block' : 'hidden',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        },
+        __self: this
+      }, __jsx("center", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "px-4 py-6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "font-bold text-xl mb-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, "Write Your Question Here"), __jsx("textarea", {
+        value: this.state.quesbox,
+        onChange: this.handleChange,
+        className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+        id: "username",
+        required: true,
+        placeholder: "Enter Your question Here ...",
+        rows: "6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }), __jsx("button", {
+        className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4",
+        onClick: function onClick() {
+          return _this5.submitquestion();
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 146
+        },
+        __self: this
+      }, "Submit Question"))))));
+    }
+  }]);
+
+  return Query;
+}(react__WEBPACK_IMPORTED_MODULE_9__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Query);
+
+/***/ }),
+
+/***/ 1:
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
@@ -11251,5 +12574,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=questionWithAnswers.js.map
+},[[1,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=index.js.map

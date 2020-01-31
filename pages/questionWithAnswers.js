@@ -24,7 +24,7 @@ class QueryWithAns extends Component{
          if(ls.get('loggedIn')){
             await this.setState({'loggedIn':true});
         }         
-            
+            this.show();
       }
       async upvote(id)
       {
@@ -107,7 +107,7 @@ class QueryWithAns extends Component{
 
       async submitanswer(){
         console.log('called');
-        console.log(this.state.quesbox);cd
+       
         const url = 'http://localhost:8000/questions/'+this.state.objId+'/answer';
         try {
           const response = await fetch(url, {
@@ -177,7 +177,6 @@ class QueryWithAns extends Component{
       }
 
     render(){
-        this.show();
     return(
         <Layout>
            <div className={this.state.form ? 'hidden':'block'}>

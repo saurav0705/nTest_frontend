@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2232,6 +2232,309 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
+/***/ "./pages/home.js":
+/*!***********************!*\
+  !*** ./pages/home.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _home_banner__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home/banner */ "./pages/home/banner.js");
+/* harmony import */ var _home_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home/options */ "./pages/home/options.js");
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+const Home = () => {
+  return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx(_home_banner__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }), __jsx(_home_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./pages/home/banner.js":
+/*!******************************!*\
+  !*** ./pages/home/banner.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home\\banner.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const Banner = () => {
+  return __jsx("div", {
+    className: " bg-yellow-500 py-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex-row content-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "flex justify-center m-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }, __jsx("h1", {
+    className: "text-6xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "We <3 people who code")))), __jsx("div", {
+    className: "text-2xl flex justify-center m-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, "We build products that empower developers and connect them to solutions that enable productivity, growth, and discovery.")), __jsx("div", {
+    className: "block md:flex xl:flex justify-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("center", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }, __jsx("button", {
+    className: "bg-white  w-15 m-2 border border-orange-500 text-orange-500  py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: undefined
+  }, "For Developers")), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: undefined
+  }, __jsx("button", {
+    className: "bg-orange-500 w-15 border text-white  py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, "For Buisnesses"))))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Banner);
+
+/***/ }),
+
+/***/ "./pages/home/options.js":
+/*!*******************************!*\
+  !*** ./pages/home/options.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\home\\options.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+const Options = () => {
+  return __jsx("div", {
+    className: "block md:flex justify-center text-center mt-20",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "max-w-sm  rounded overflow-hidden border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "text-xl",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, "Public Q&A"), __jsx("div", {
+    className: "text-3l  p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account."), __jsx("button", {
+    className: "bg-blue-800 m-2  text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, "Browse Questions")), __jsx("div", {
+    className: "max-w-sm rounded overflow-hidden m-4 md:-mt-4  md:mb-8 border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "text-xl ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: undefined
+  }, "Private Q&A"), __jsx("div", {
+    className: "text-3l p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: undefined
+  }, "Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine."), __jsx("button", {
+    className: "bg-orange-500 m-2  text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: undefined
+  }, "Try For Free")), __jsx("div", {
+    className: "max-w-sm rounded overflow-hidden border shadow-lg m-4 h-auto p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: undefined
+  }, __jsx("img", {
+    className: "w-full  object-cover p-5",
+    align: "middle",
+    src: "https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: undefined
+  }), __jsx("div", {
+    className: "text-xl ",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }, "Browse Jobs"), __jsx("div", {
+    className: "text-3l p-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: undefined
+  }, "Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more."), __jsx("button", {
+    className: "bg-blue-800 m-2 text-white font-bold py-2 px-4 rounded",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: undefined
+  }, "Find A Job")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Options);
+
+/***/ }),
+
 /***/ "./pages/images.js":
 /*!*************************!*\
   !*** ./pages/images.js ***!
@@ -2255,6 +2558,364 @@ const urlOfImages = {
   'downvote': 'data:image/png;base64,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',
   'question': 'https://lh3.googleusercontent.com/proxy/e-Gwn9DYpsYZDiY33rTCdgwQacPKcZ7v0rvJy99vLkbakZZCampxyTvgOc19wZdq1WECobq9ozAKeKpx61sFewp8ZBXGkKifTUrE2cgM'
 };
+
+/***/ }),
+
+/***/ "./pages/index.js":
+/*!************************!*\
+  !*** ./pages/index.js ***!
+  \************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Index; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/main.css */ "./styles/main.css");
+/* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_main_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _pages_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/Layout */ "./pages/Layout.js");
+/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/home */ "./pages/home.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./header */ "./pages/header.js");
+/* harmony import */ var _pages_personal_Info__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/personal-Info */ "./pages/personal-Info.js");
+/* harmony import */ var _pages_questionspage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/questionspage */ "./pages/questionspage.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _pages_questionWithAnswers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../pages/questionWithAnswers */ "./pages/questionWithAnswers.js");
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+
+
+
+
+const click = () => {};
+
+class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_pages_home__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./pages/personal-Info.js":
+/*!********************************!*\
+  !*** ./pages/personal-Info.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images */ "./pages/images.js");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! local-storage */ "local-storage");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\personal-Info.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+class Personal extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {}
+    };
+  }
+
+  async componentDidMount() {
+    if (!local_storage__WEBPACK_IMPORTED_MODULE_3___default.a.get('loggedIn')) {
+      next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/');
+    }
+
+    const url = 'http://localhost:8000/users/info';
+
+    try {
+      const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_5___default()(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": '*',
+          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_3___default.a.get('token')
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data.user); //   console.log(response);
+
+        await this.setState({
+          user: data.user
+        });
+      } else {
+        alert('unable to fetch');
+      }
+    } catch (error) {
+      console.error('You have an error in your code or there are Network issues.', error);
+      throw new Error(error);
+    }
+  }
+
+  renderQuestions() {
+    if (!this.state.user.questions) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    } else {
+      if (this.state.user.questions.length === 0) {
+        return __jsx("p", {
+          className: "text-4l m-1 bg-red-600 p-3 rounded",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 59
+          },
+          __self: this
+        }, "Well you are Very Intelligent");
+      }
+
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.user.questions.map(ques => {
+        return __jsx("p", {
+          className: "text-4l m-1 bg-red-600 p-3 rounded",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 63
+          },
+          __self: this
+        }, "Q. ", ques.question);
+      }));
+    }
+  }
+
+  renderAnswers() {
+    if (!this.state.user.answers) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
+    } else {
+      if (this.state.user.answers.length === 0) {
+        return __jsx("p", {
+          className: "text-4l m-1 bg-green-600 p-3 rounded",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 74
+          },
+          __self: this
+        }, "Lets Start Helping Others");
+      }
+
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.user.answers.map(ans => {
+        return __jsx("p", {
+          className: "text-4l m-1 bg-green-600 p-3 rounded",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 78
+          },
+          __self: this
+        }, "A. ", ans.answer);
+      }));
+    }
+  }
+
+  render() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 86
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "block md:flex justify-center p-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 87
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "p-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88
+      },
+      __self: this
+    }, __jsx("img", {
+      src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"].user,
+      className: "h-auto rounded-full",
+      alt: "Profile Picture",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 89
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "flex justify-center mt-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90
+      },
+      __self: this
+    }, __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 91
+      },
+      __self: this
+    }, __jsx("img", {
+      src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"].copyright,
+      className: "mx-2 mt-1 h-8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 92
+      },
+      __self: this
+    })), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: this
+    }, " ", __jsx("img", {
+      src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"]['stack-overflow'],
+      className: "h-8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: this
+    })), __jsx("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95
+      },
+      __self: this
+    }, __jsx("p", {
+      className: "font-bold text-4l mb-2 mt-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95
+      },
+      __self: this
+    }, "Stack Overflow ")))), __jsx("div", {
+      className: "p-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "max-w-sm rounded border overflow-hidden shadow-lg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "px-6 py-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "font-bold text-4xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 101
+      },
+      __self: this
+    }, this.state.user.name), __jsx("div", {
+      className: " text-2xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 102
+      },
+      __self: this
+    }, this.state.user.username), __jsx("p", {
+      className: "text-gray-700 text-base mt-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: this
+    }, "Below Is the list of all the Question you asked and Answered. We very much Appreciate your contribution."), __jsx("div", {
+      className: "p-2 m-2 bg-red-400 text-white",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 108
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "font-bold text-xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109
+      },
+      __self: this
+    }, "Questions Asked"), this.renderQuestions()), __jsx("div", {
+      className: "p-2 m-2 bg-green-400 text-white",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 113
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "font-bold text-xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114
+      },
+      __self: this
+    }, "Questions Answered"), this.renderAnswers()), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 117
+      },
+      __self: this
+    }))), __jsx("div", {
+      className: "flex justify-center m-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 123
+      },
+      __self: this
+    }, __jsx("button", {
+      className: "bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 124
+      },
+      __self: this
+    }, "Edit"))))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Personal);
 
 /***/ }),
 
@@ -2672,14 +3333,297 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 6:
-/*!********************************************!*\
-  !*** multi ./pages/questionWithAnswers.js ***!
-  \********************************************/
+/***/ "./pages/questionspage.js":
+/*!********************************!*\
+  !*** ./pages/questionspage.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images */ "./pages/images.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! local-storage */ "local-storage");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionspage.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+class Query extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor() {
+    super();
+    this.state = {
+      questionList: [],
+      answers: [],
+      questionBox: false,
+      quesbox: '',
+      query: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      quesbox: event.target.value
+    });
+  }
+
+  async componentDidMount() {
+    await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:8000/questions/').then(response => response.json()).then(res => {
+      this.setState({
+        questionList: [...res.questionList]
+      });
+    });
+  }
+
+  questionDetails(obj) {
+    localStorage.setItem('obj_id', obj);
+    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/questionWithAnswers');
+  }
+
+  renderQuestion() {
+    if (!this.state.questionList || this.state.questionList.length === 0) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "NOTHING FOUND"));
+    }
+
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.questionList.map(question => {
+      return __jsx("div", {
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        onClick: () => this.questionDetails(question._id),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, __jsx("b", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Q."), "   ", question.question);
+    }));
+  }
+
+  openQuestionDialog() {
+    this.setState({
+      questionBox: !this.state.questionBox
+    });
+  }
+
+  async submitquestion() {
+    console.log('called');
+    console.log(this.state.quesbox);
+    const url = 'http://localhost:8000/questions';
+
+    try {
+      const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": '*',
+          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('token')
+        },
+        body: JSON.stringify({
+          question: this.state.quesbox
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log("data----------- ", data);
+        console.log(response);
+        this.openQuestionDialog();
+        this.componentDidMount(); //   await this.setState({
+        //       user:data.user
+        //   })
+      } else {
+        alert('unable to fetch');
+      }
+    } catch (error) {
+      console.error('You have an error in your code or there are Network issues.', error);
+      throw new Error(error);
+    }
+  }
+
+  async test() {
+    if (local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query') && local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query').length > 0) {
+      console.log('tetsing sucess ----------------- ', local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query'));
+      await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:8000/questions/search/' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query')).then(response => response.json()).then(res => {
+        console.log(res);
+        this.setState({
+          questionList: [...res.questionList]
+        });
+        localStorage.setItem('query', '');
+      });
+    } else {
+      return;
+    }
+  }
+
+  render() {
+    this.test();
+    return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 121
+      },
+      __self: this
+    }, __jsx("div", {
+      className: this.state.questionBox ? 'hidden' : 'block',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 122
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "flex overflow-hidden",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 123
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "fixed bottom-3 right-3 md:block  p-0 md:p-8",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 124
+      },
+      __self: this
+    }, __jsx("div", {
+      className: " w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 125
+      },
+      __self: this
+    }, __jsx("img", {
+      src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"].question,
+      className: "h-8 rounded-full inline-block",
+      onClick: () => {
+        this.openQuestionDialog();
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126
+      },
+      __self: this
+    }), __jsx("span", {
+      className: "hidden md:block ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 126
+      },
+      __self: this
+    }, " Ask A Question"))), __jsx("div", {
+      className: "block text-center  border-gray-600 w-screen ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 132
+      },
+      __self: this
+    }, this.renderQuestion()))), __jsx("div", {
+      className: this.state.questionBox ? 'block' : 'hidden',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138
+      },
+      __self: this
+    }, __jsx("center", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 139
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 140
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "px-4 py-6",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 142
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "font-bold text-xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 143
+      },
+      __self: this
+    }, "Write Your Question Here"), __jsx("textarea", {
+      value: this.state.quesbox,
+      onChange: this.handleChange,
+      className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+      id: "username",
+      required: true,
+      placeholder: "Enter Your question Here ...",
+      rows: "6",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 145
+      },
+      __self: this
+    }), __jsx("button", {
+      className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4",
+      onClick: () => this.submitquestion(),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: this
+    }, "Submit Question"))))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Query);
+
+/***/ }),
+
+/***/ "./styles/main.css":
+/*!*************************!*\
+  !*** ./styles/main.css ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 3:
+/*!******************************!*\
+  !*** multi ./pages/index.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\questionWithAnswers.js */"./pages/questionWithAnswers.js");
+module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -2828,4 +3772,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=questionWithAnswers.js.map
+//# sourceMappingURL=index.js.map

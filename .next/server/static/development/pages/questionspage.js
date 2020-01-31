@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2258,10 +2258,10 @@ const urlOfImages = {
 
 /***/ }),
 
-/***/ "./pages/questionWithAnswers.js":
-/*!**************************************!*\
-  !*** ./pages/questionWithAnswers.js ***!
-  \**************************************/
+/***/ "./pages/questionspage.js":
+/*!********************************!*\
+  !*** ./pages/questionspage.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2273,9 +2273,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./images */ "./pages/images.js");
 /* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
 /* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! local-storage */ "local-storage");
-/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionWithAnswers.js";
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! local-storage */ "local-storage");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionspage.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2283,16 +2285,16 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+
+class Query extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor() {
     super();
     this.state = {
-      question: {},
+      questionList: [],
       answers: [],
-      loggedIn: false,
-      objId: '',
-      form: false,
-      quesbox: ''
+      questionBox: false,
+      quesbox: '',
+      query: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -2304,102 +2306,59 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   async componentDidMount() {
-    if (local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('loggedIn')) {
-      await this.setState({
-        'loggedIn': true
-      });
-    }
-
-    this.show();
-  }
-
-  async upvote(id) {
-    const url = 'http://localhost:8000/answers/' + id + '/upvote';
-
-    try {
-      const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()(url, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin": '*',
-          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('token')
-        }
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log("data----------- ", data);
-        console.log(response);
-        this.componentDidMount(); //   await this.setState({
-        //       user:data.user
-        //   })
-      } else {
-        alert('unable to fetch');
-      }
-    } catch (error) {
-      console.error('You have an error in your code or there are Network issues.', error);
-      throw new Error(error);
-    }
-
-    console.log('up----------------------', id);
-  }
-
-  async downvote(id) {
-    const url = 'http://localhost:8000/answers/' + id + '/downvote';
-
-    try {
-      const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()(url, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          "Access-Control-Allow-Origin": '*',
-          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('token')
-        }
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log("data----------- ", data);
-        console.log(response);
-        this.componentDidMount(); //   await this.setState({
-        //       user:data.user
-        //   })
-      } else {
-        alert('unable to fetch');
-      }
-    } catch (error) {
-      console.error('You have an error in your code or there are Network issues.', error);
-      throw new Error(error);
-    }
-
-    console.log('down-----------------------', id);
-  }
-
-  async show() {
-    await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:8000/questions/' + local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('obj_id')).then(response => response.json()).then(res => {
-      console.log('test---------------- ', res);
-
-      if (res.question) {
-        this.setState({
-          question: res.question
-        });
-
-        if (this.state.question.answers) {
-          this.setState({
-            answers: this.state.question.answers
-          });
-        }
-      }
-
+    await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:8000/questions/').then(response => response.json()).then(res => {
       this.setState({
-        'objId': local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('obj_id')
+        questionList: [...res.questionList]
       });
     });
   }
 
-  async submitanswer() {
+  questionDetails(obj) {
+    localStorage.setItem('obj_id', obj);
+    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/questionWithAnswers');
+  }
+
+  renderQuestion() {
+    if (!this.state.questionList || this.state.questionList.length === 0) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "NOTHING FOUND"));
+    }
+
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.questionList.map(question => {
+      return __jsx("div", {
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        onClick: () => this.questionDetails(question._id),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, __jsx("b", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Q."), "   ", question.question);
+    }));
+  }
+
+  openQuestionDialog() {
+    this.setState({
+      questionBox: !this.state.questionBox
+    });
+  }
+
+  async submitquestion() {
     console.log('called');
-    const url = 'http://localhost:8000/questions/' + this.state.objId + '/answer';
+    console.log(this.state.quesbox);
+    const url = 'http://localhost:8000/questions';
 
     try {
       const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()(url, {
@@ -2407,10 +2366,10 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         headers: {
           'Content-Type': 'application/json',
           "Access-Control-Allow-Origin": '*',
-          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_4___default.a.get('token')
+          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('token')
         },
         body: JSON.stringify({
-          answer: this.state.quesbox
+          question: this.state.quesbox
         })
       });
 
@@ -2418,7 +2377,7 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         const data = await response.json();
         console.log("data----------- ", data);
         console.log(response);
-        this.toggleBox();
+        this.openQuestionDialog();
         this.componentDidMount(); //   await this.setState({
         //       user:data.user
         //   })
@@ -2431,218 +2390,117 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }
   }
 
-  renderAnswer() {
-    if (this.state.answers && this.state.answers.length > 0) {
-      return __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 145
-        },
-        __self: this
-      }, this.state.answers.map(answer => {
-        return __jsx("div", {
-          className: "flex justify-center bg-green-300 p-4 m-4",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 146
-          },
-          __self: this
-        }, __jsx("div", {
-          className: "block md:flex justify-center w-full",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 147
-          },
-          __self: this
-        }, __jsx("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 148
-          },
-          __self: this
-        }, __jsx("center", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 148
-          },
-          __self: this
-        }, __jsx("img", {
-          src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"].answer,
-          className: "h-6 mt-5",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 149
-          },
-          __self: this
-        }))), __jsx("div", {
-          className: "p-1 w-auto text-4m md:text-2xl",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 152
-          },
-          __self: this
-        }, __jsx("span", {
-          className: "ml-2",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 153
-          },
-          __self: this
-        }, answer.answer), __jsx("div", {
-          className: "text-right text-gray-500",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 156
-          },
-          __self: this
-        }, "-- ", answer.author.name)), __jsx("div", {
-          className: this.state.loggedIn ? 'block p-6' : 'hidden p-6',
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 158
-          },
-          __self: this
-        }, __jsx("button", {
-          onClick: () => this.upvote(answer._id),
-          className: "bg-green-500 hover:bg-green-700 w-full text-white p-2 px-4 mt-1 rounded mr-4",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 159
-          },
-          __self: this
-        }, "Upvote ", answer.upvote.length), __jsx("button", {
-          onClick: () => this.downvote(answer._id),
-          className: "bg-red-500 hover:bg-red-700 text-white w-full rounded px-4 p-2 mt-1 ",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 161
-          },
-          __self: this
-        }, "Downvote ", answer.downvote.length))));
-      }));
+  async test() {
+    if (local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query') && local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query').length > 0) {
+      console.log('tetsing sucess ----------------- ', local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query'));
+      await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('http://localhost:8000/questions/search/' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query')).then(response => response.json()).then(res => {
+        console.log(res);
+        this.setState({
+          questionList: [...res.questionList]
+        });
+        localStorage.setItem('query', '');
+      });
     } else {
-      return __jsx("div", {
-        className: "flex justify-center bg-green-300 p-4 m-4 text-2xl",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 167
-        },
-        __self: this
-      }, "NO ONE ANSWERED IT YET");
+      return;
     }
   }
 
-  toggleBox() {
-    this.setState({
-      form: !this.state.form
-    });
-  }
-
   render() {
+    this.test();
     return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181
+        lineNumber: 121
       },
       __self: this
     }, __jsx("div", {
-      className: this.state.form ? 'hidden' : 'block',
+      className: this.state.questionBox ? 'hidden' : 'block',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182
+        lineNumber: 122
       },
       __self: this
     }, __jsx("div", {
       className: "flex overflow-hidden",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 183
+        lineNumber: 123
       },
       __self: this
     }, __jsx("div", {
-      className: "fixed top-10  left-3 md:relative md:w-1/6 p-6 -ml-6",
+      className: "fixed bottom-3 right-3 md:block  p-0 md:p-8",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 124
       },
       __self: this
     }, __jsx("div", {
-      onClick: () => this.toggleBox(),
-      className: "bg-blue-500 hover:bg-blue-700 w-full text-white font-bold p-1 px-4 -ml-3 md:py-2 md:px-4 rounded m-1 md:m-4",
+      className: " w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 125
       },
       __self: this
-    }, __jsx("span", {
-      className: this.state.loggedIn ? 'block' : 'hidden',
+    }, __jsx("img", {
+      src: _images__WEBPACK_IMPORTED_MODULE_2__["urlOfImages"].question,
+      className: "h-8 rounded-full inline-block",
+      onClick: () => {
+        this.openQuestionDialog();
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 126
       },
       __self: this
-    }, "Answer"))), __jsx("div", {
-      className: "block text-center  border-gray-600 w-screen md:w-5/6",
+    }), __jsx("span", {
+      className: "hidden md:block ",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190
+        lineNumber: 126
       },
       __self: this
-    }, __jsx("div", {
-      className: "text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+    }, " Ask A Question"))), __jsx("div", {
+      className: "block text-center  border-gray-600 w-screen ",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 191
+        lineNumber: 132
       },
       __self: this
-    }, __jsx("b", {
+    }, this.renderQuestion()))), __jsx("div", {
+      className: this.state.questionBox ? 'block' : 'hidden',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 192
-      },
-      __self: this
-    }, "Q."), "   ", this.state.question.question), __jsx("div", {
-      className: "text-2xl bg-green-500 p-8 text-white",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 197
-      },
-      __self: this
-    }, "Answers", this.renderAnswer())))), __jsx("div", {
-      className: this.state.form ? 'block' : 'hidden',
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 206
+        lineNumber: 138
       },
       __self: this
     }, __jsx("center", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207
+        lineNumber: 139
       },
       __self: this
     }, __jsx("div", {
       className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208
+        lineNumber: 140
       },
       __self: this
     }, __jsx("div", {
       className: "px-4 py-6",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 210
+        lineNumber: 142
       },
       __self: this
     }, __jsx("div", {
       className: "font-bold text-xl mb-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211
+        lineNumber: 143
       },
       __self: this
-    }, "Write Your Answer Here"), __jsx("textarea", {
+    }, "Write Your Question Here"), __jsx("textarea", {
       value: this.state.quesbox,
       onChange: this.handleChange,
       className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
@@ -2652,15 +2510,15 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       rows: "6",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 213
+        lineNumber: 145
       },
       __self: this
     }), __jsx("button", {
       className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4",
-      onClick: () => this.submitanswer(),
+      onClick: () => this.submitquestion(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214
+        lineNumber: 146
       },
       __self: this
     }, "Submit Question"))))));
@@ -2668,18 +2526,18 @@ class QueryWithAns extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (QueryWithAns);
+/* harmony default export */ __webpack_exports__["default"] = (Query);
 
 /***/ }),
 
-/***/ 6:
-/*!********************************************!*\
-  !*** multi ./pages/questionWithAnswers.js ***!
-  \********************************************/
+/***/ 5:
+/*!**************************************!*\
+  !*** multi ./pages/questionspage.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\questionWithAnswers.js */"./pages/questionWithAnswers.js");
+module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\questionspage.js */"./pages/questionspage.js");
 
 
 /***/ }),
@@ -2828,4 +2686,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=questionWithAnswers.js.map
+//# sourceMappingURL=questionspage.js.map
