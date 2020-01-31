@@ -57,6 +57,9 @@ class Query extends Component{
 
       };
 
+      logIn(){
+          return ls.get('loggedIn');
+      }
 
       openQuestionDialog(){
           this.setState({
@@ -86,7 +89,7 @@ class Query extends Component{
             //       user:data.user
             //   })
             } else {
-              alert('unable to fetch')
+              alert('Log In to add question')
               
             }
           } catch (error) {
@@ -121,7 +124,7 @@ class Query extends Component{
         <Layout>
            <div className={this.state.questionBox ? 'hidden':'block'}>
             <div className="flex overflow-hidden">
-                <div className="fixed bottom-3 right-3 md:block  p-0 md:p-8">
+                <div className="fixed bottom-3 right-3 md:block  p-4 md:p-8">
                     <div className=" w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ">
                         <img src={urlOfImages.question} className="h-8 rounded-full inline-block" onClick={()=>{this.openQuestionDialog()}}/><span className="hidden md:block " > Ask A Question</span>
                     </div>

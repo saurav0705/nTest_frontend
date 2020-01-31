@@ -10158,7 +10158,8 @@ function (_Component) {
     _this.state = {
       loggedIn: false,
       Search: false,
-      SearchInput: ''
+      SearchInput: '',
+      ham: false
     };
     _this.handleChange = _this.handleChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this));
     return _this;
@@ -10251,6 +10252,13 @@ function (_Component) {
       }
     }
   }, {
+    key: "toggleHam",
+    value: function toggleHam() {
+      this.setState({
+        ham: !this.state.ham
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -10259,66 +10267,120 @@ function (_Component) {
         className: "bg-gray-100 text-gray-800 px-1 md:px-4  sticky top-0 z-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 67
         },
         __self: this
       }, __jsx("div", {
         className: "py-4 flex whitespace-no-wrap justify-around",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 68
         },
         __self: this
       }, __jsx("div", {
-        className: "",
+        className: "flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 69
         },
         __self: this
       }, __jsx("button", {
         type: "button",
         className: "block  text-white-500  focus:text-gray focus:outline-none",
+        onClick: function onClick() {
+          _this2.toggleHam();
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 70
         },
         __self: this
       }, __jsx("svg", {
-        className: "h-6 w-6 fill-current",
+        className: "h-6 w-6 fill-current -mt-2 md:-mt-4",
         viewBox: "0 0 24 24",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 71
         },
         __self: this
       }, __jsx("path", {
+        className: this.state.ham ? 'hidden' : 'block',
         fillRule: "evenodd",
         d: "M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 72
         },
         __self: this
-      })))), __jsx("div", {
-        className: "flex",
+      }), __jsx("path", {
+        className: this.state.ham ? 'block' : 'hidden',
+        d: "M23.302,16.628l-5.395-5.415l5.407-5.345c0.222-0.222,0.222-0.584,0-0.806l-1.538-1.546\r c-0.106-0.107-0.251-0.165-0.403-0.165s-0.295,0.062-0.402,0.165l-5.382,5.328l-5.39-5.325c-0.107-0.106-0.251-0.165-0.403-0.165\r c-0.152,0-0.296,0.062-0.403,0.165L7.858,5.066c-0.222,0.222-0.222,0.584,0,0.806l5.407,5.346l-5.391,5.41\r c-0.107,0.107-0.168,0.251-0.168,0.403s0.057,0.296,0.168,0.403l1.538,1.546c0.111,0.11,0.255,0.168,0.403,0.168\r c0.144,0,0.292-0.054,0.403-0.168l5.37-5.396l5.374,5.391c0.111,0.111,0.255,0.169,0.402,0.169c0.145,0,0.293-0.054,0.402-0.169\r l1.539-1.546c0.106-0.106,0.168-0.25,0.168-0.402C23.471,16.879,23.408,16.735,23.302,16.628z",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 73
+        },
+        __self: this
+      }))), __jsx("div", {
+        className: this.state.ham ? 'block' : 'hidden',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "p-2 z-1 mt-6 px-8  absolute bg-yellow-400 text-white rounded",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 84
+        },
+        __self: this
+      }, __jsx("a", {
+        className: "block",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/questionspage",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }, __jsx("a", {
+        className: "block",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }, "All Questions")))), __jsx("div", {
+        className: "flex",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
         },
         __self: this
       }, __jsx("div", {
         className: "flex",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 90
         },
         __self: this
       }, __jsx("img", {
@@ -10326,55 +10388,20 @@ function (_Component) {
         src: "data:image/png;base64,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",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 91
         },
         __self: this
       }), __jsx("h4", {
         className: "hidden md:block",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 92
         },
         __self: this
-      }, "StackOverflow"))), __jsx("div", {
-        className: "p-2 z-1 mt-6 px-8 absolute bg-gray-700 hidden",
+      }, "StackOverflow"))))), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      }, __jsx("a", {
-        className: "block",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 79
-        },
-        __self: this
-      }, "link1"), __jsx("a", {
-        className: "block",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
-      }, "link1"), __jsx("a", {
-        className: "block",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, "link1"), __jsx("a", {
-        className: "block",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }, "link1"))), __jsx("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 98
         },
         __self: this
       }, __jsx("button", {
@@ -10382,48 +10409,48 @@ function (_Component) {
         className: "block bg-orange-500  rounded-full text-white px-4  hover:text-white focus:text-white focus:outline-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 99
         },
         __self: this
       }, "Products"), __jsx("div", {
-        className: "block bg-white-500 p-2 z-1 px-8 absolute bg-gray-700 hidden",
+        className: "block bg-white-500 p-2 z-1 px-8 absolute bg-yellow-400 hidden",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 102
         },
         __self: this
       }, __jsx("a", {
         className: "block",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 103
         },
         __self: this
       }, "link1"), __jsx("a", {
         className: "block",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 104
         },
         __self: this
       }, "link1"), __jsx("a", {
         className: "block",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 105
         },
         __self: this
       }, "link1"), __jsx("a", {
         className: "block",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 106
         },
         __self: this
       }, "link1"))), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 109
         },
         __self: this
       }, __jsx("button", {
@@ -10431,14 +10458,14 @@ function (_Component) {
         className: "hidden md:block  rounded-full px-4 hover:text-white hover:bg-gray-500 focus:text-white focus:outline-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 110
         },
         __self: this
       }, "Customers")), __jsx("div", {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 115
         },
         __self: this
       }, __jsx("button", {
@@ -10446,13 +10473,13 @@ function (_Component) {
         className: "hidden md:block  rounded-full px-2 hover:bg-gray-500  hover:text-white focus:text-white focus:outline-none",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 116
         },
         __self: this
       }, "Use Cases")), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107
+          lineNumber: 120
         },
         __self: this
       }, __jsx("input", {
@@ -10466,7 +10493,7 @@ function (_Component) {
         placeholder: "Search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 121
         },
         __self: this
       }), __jsx("img", {
@@ -10477,20 +10504,20 @@ function (_Component) {
         className: "h-6 block md:hidden",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 122
         },
         __self: this
       }), __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 123
         },
         __self: this
       }, __jsx("div", {
         className: this.state.Search ? 'block' : 'hidden',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 111
+          lineNumber: 124
         },
         __self: this
       }, __jsx("input", {
@@ -10504,68 +10531,68 @@ function (_Component) {
         placeholder: "Search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 125
         },
         __self: this
       })))), __jsx("div", {
         className: this.state.loggedIn ? 'hidden' : 'flex',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 129
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 130
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/signupAndLogin/login",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 131
         },
         __self: this
       }, __jsx("button", {
         className: "text-xs md:text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 132
         },
         __self: this
       }, "Log In"))), __jsx("div", {
         className: "ml-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 122
+          lineNumber: 135
         },
         __self: this
       }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_8___default.a, {
         href: "/signupAndLogin/signup",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 136
         },
         __self: this
       }, __jsx("button", {
         className: "text-xs md:text-xl bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 137
         },
         __self: this
       }, "Sign Up")))), __jsx("div", {
         className: this.state.loggedIn ? 'flex' : 'hidden',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 141
         },
         __self: this
       }, __jsx("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 142
         },
         __self: this
       }, __jsx("img", {
@@ -10576,14 +10603,14 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 143
         },
         __self: this
       })), __jsx("div", {
         className: "ml-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 145
         },
         __self: this
       }, __jsx("button", {
@@ -10593,7 +10620,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 146
         },
         __self: this
       }, "Log Out")))));
@@ -11110,10 +11137,17 @@ function (_Component) {
         },
         __self: this
       }, __jsx("div", {
-        className: "fixed top-10  left-3 md:relative md:w-1/6 p-6 -ml-6",
+        className: this.state.loggedIn ? 'block' : 'hidden',
         __source: {
           fileName: _jsxFileName,
           lineNumber: 184
+        },
+        __self: this
+      }, __jsx("div", {
+        className: "fixed top-10  left-3 md:relative md:w-1/6 p-6 -ml-6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 185
         },
         __self: this
       }, __jsx("div", {
@@ -11123,75 +11157,81 @@ function (_Component) {
         className: "bg-blue-500 hover:bg-blue-700 w-full text-white font-bold p-1 px-4 -ml-3 md:py-2 md:px-4 rounded m-1 md:m-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
-        },
-        __self: this
-      }, __jsx("span", {
-        className: this.state.loggedIn ? 'block' : 'hidden',
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 186
         },
         __self: this
-      }, "Answer"))), __jsx("div", {
-        className: "block text-center  border-gray-600 w-screen md:w-5/6",
+      }, __jsx("span", {
+        className: "w-full",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 187
+        },
+        __self: this
+      }, " A")))), __jsx("div", {
+        className: "block text-center  border-gray-600 w-screen w-full",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 191
+        },
+        __self: this
+      }, __jsx("center", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 192
         },
         __self: this
       }, __jsx("div", {
         className: "text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 193
         },
         __self: this
       }, __jsx("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 194
         },
         __self: this
       }, "Q."), "   ", this.state.question.question), __jsx("div", {
         className: "text-2xl bg-green-500 p-8 text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197
+          lineNumber: 199
         },
         __self: this
-      }, "Answers", this.renderAnswer())))), __jsx("div", {
+      }, "Answers", this.renderAnswer()))))), __jsx("div", {
         className: this.state.form ? 'block' : 'hidden',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 210
         },
         __self: this
       }, __jsx("center", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 211
         },
         __self: this
       }, __jsx("div", {
         className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 212
         },
         __self: this
       }, __jsx("div", {
         className: "px-4 py-6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 214
         },
         __self: this
       }, __jsx("div", {
         className: "font-bold text-xl mb-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 211
+          lineNumber: 215
         },
         __self: this
       }, "Write Your Answer Here"), __jsx("textarea", {
@@ -11204,7 +11244,7 @@ function (_Component) {
         rows: "6",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 217
         },
         __self: this
       }), __jsx("button", {
@@ -11214,7 +11254,7 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 214
+          lineNumber: 218
         },
         __self: this
       }, "Submit Question"))))));
@@ -11228,7 +11268,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!****************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FquestionWithAnswers&absolutePagePath=C%3A%5CUsers%5CLenovo%5CDesktop%5Cntest%5Cnext_tailwind%5Cpages%5CquestionWithAnswers.js ***!
   \****************************************************************************************************************************************************************************/
@@ -11251,5 +11291,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=questionWithAnswers.js.map

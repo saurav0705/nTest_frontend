@@ -181,13 +181,15 @@ class QueryWithAns extends Component{
         <Layout>
            <div className={this.state.form ? 'hidden':'block'}>
             <div className="flex overflow-hidden">
+                <div  className={this.state.loggedIn ? 'block':'hidden'}>
                 <div className="fixed top-10  left-3 md:relative md:w-1/6 p-6 -ml-6">
                     <div onClick={()=> this.toggleBox()} className="bg-blue-500 hover:bg-blue-700 w-full text-white font-bold p-1 px-4 -ml-3 md:py-2 md:px-4 rounded m-1 md:m-4">
-                        <span className={this.state.loggedIn ? 'block':'hidden'}>Answer</span>
+                        <span className="w-full"> A</span>
                     </div>
-                    
+                    </div>
                 </div>
-            <div className="block text-center  border-gray-600 w-screen md:w-5/6">
+            <div className="block text-center  border-gray-600 w-screen w-full">
+                <center>
             <div className="text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600" >
                   <b>Q.</b>   {this.state.question.question}
                   
@@ -200,7 +202,9 @@ class QueryWithAns extends Component{
 
                 </div>
 
+                </center>
             </div>
+            
             </div>
             </div>
             <div className={this.state.form ? 'block':'hidden'}>

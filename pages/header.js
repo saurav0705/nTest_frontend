@@ -12,7 +12,8 @@ class Header extends Component
         this.state = {
             loggedIn:false,
             Search : false,
-            SearchInput : ''
+            SearchInput : '',
+            ham: false
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -55,18 +56,34 @@ class Header extends Component
         Router.push('/questionspage');
     } 
     }
+    toggleHam(){
+        this.setState({
+            ham: !this.state.ham
+        })
+    }
     render(){
     return (
         
     <header className="bg-gray-100 text-gray-800 px-1 md:px-4  sticky top-0 z-2">
     <div className="py-4 flex whitespace-no-wrap justify-around">
-    <div className="">
-    <button type="button" className="block  text-white-500  focus:text-gray focus:outline-none">
-        <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-          <path fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+    <div className="flex">
+    <button type="button" className="block  text-white-500  focus:text-gray focus:outline-none" onClick={()=>{this.toggleHam()}}>
+        <svg className="h-6 w-6 fill-current -mt-2 md:-mt-4" viewBox="0 0 24 24">
+          <path className={this.state.ham ? 'hidden':'block'} fillRule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+          <path className={this.state.ham ? 'block':'hidden'}  d="M23.302,16.628l-5.395-5.415l5.407-5.345c0.222-0.222,0.222-0.584,0-0.806l-1.538-1.546
+								c-0.106-0.107-0.251-0.165-0.403-0.165s-0.295,0.062-0.402,0.165l-5.382,5.328l-5.39-5.325c-0.107-0.106-0.251-0.165-0.403-0.165
+								c-0.152,0-0.296,0.062-0.403,0.165L7.858,5.066c-0.222,0.222-0.222,0.584,0,0.806l5.407,5.346l-5.391,5.41
+								c-0.107,0.107-0.168,0.251-0.168,0.403s0.057,0.296,0.168,0.403l1.538,1.546c0.111,0.11,0.255,0.168,0.403,0.168
+								c0.144,0,0.292-0.054,0.403-0.168l5.37-5.396l5.374,5.391c0.111,0.111,0.255,0.169,0.402,0.169c0.145,0,0.293-0.054,0.402-0.169
+								l1.539-1.546c0.106-0.106,0.168-0.25,0.168-0.402C23.471,16.879,23.408,16.735,23.302,16.628z"/>
         </svg>
       </button>
-      
+      <div className={this.state.ham ? 'block':'hidden'}>
+
+        <div className="p-2 z-1 mt-6 px-8  absolute bg-yellow-400 text-white rounded">
+        <Link href='/'><a className="block">Home</a></Link>
+        <Link href='/questionspage'><a className="block">All Questions</a></Link>
+    </div>
       </div>
         <div className="flex">
         <Link href="/">
@@ -75,18 +92,14 @@ class Header extends Component
           <h4 className="hidden md:block">StackOverflow</h4>
           </div>
           </Link>
-        <div className="p-2 z-1 mt-6 px-8 absolute bg-gray-700 hidden">
-        <a className="block">link1</a>
-        <a className="block">link1</a>
-        <a className="block">link1</a>
-        <a className="block">link1</a>
+          
     </div>
         </div>
     <div >
         <button type="button" className="block bg-orange-500  rounded-full text-white px-4  hover:text-white focus:text-white focus:outline-none">
             Products
         </button>
-        <div className="block bg-white-500 p-2 z-1 px-8 absolute bg-gray-700 hidden">
+        <div className="block bg-white-500 p-2 z-1 px-8 absolute bg-yellow-400 hidden">
         <a className="block">link1</a>
         <a className="block">link1</a>
         <a className="block">link1</a>
