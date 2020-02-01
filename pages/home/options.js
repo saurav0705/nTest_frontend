@@ -18,7 +18,7 @@ const Options = () => {
             <img className="w-full  object-cover p-5" align="middle" src="https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f"/>
                 <div className="text-xl ">Private Q&A
                     </div>
-                    <div className="text-3l p-4">Level up with Stack Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
+                    <div className="text-3l p-4">Level up with Question Overflow while you work. Share knowledge privately with your coworkers using our flagship Q&A engine.
                         </div>
                         <button className="bg-orange-500 m-2  text-white font-bold py-2 px-4 rounded">
                         Try For Free
@@ -29,7 +29,7 @@ const Options = () => {
             <img className="w-full  object-cover p-5" align="middle" src="https://cdn.sstatic.net/Img/home/public-qa.svg?v=d82acaa7df9f"/>
                 <div className="text-xl ">Browse Jobs
                     </div>
-                    <div className="text-3l p-4">Find the right job through high quality listings and search for roles based on title, technology stack, salary, location, and more.
+                    <div className="text-3l p-4">Find the right job through high quality listings and search for roles based on title, technology Question, salary, location, and more.
                         </div>
                         <button className="bg-blue-800 m-2 text-white font-bold py-2 px-4 rounded">
                             Find A Job

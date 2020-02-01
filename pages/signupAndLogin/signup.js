@@ -9,7 +9,7 @@ class SignUp extends Component{
 
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' ,name:''}
+    this.state = { username: '', password: '' ,name:'' ,error:''};
     this.handleChange = this.handleChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
     this.handledispchange = this.handledispchange.bind(this); 
@@ -27,22 +27,38 @@ class SignUp extends Component{
   }
   
   componentDidMount(){
-    console.log('here is the status ------------ ',ls.get('loggedIn'));
-    console.log('here is the token ------------ ',ls.get('token'));
+    //console.log(.*)$
+    //console.log(.*)$
     if(ls.get('loggedIn'))
     {
       Router.push('/');
     }
   }
-
+  
+  validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //console.log(re.test(email));
+    return re.test(email);
+  }
+  
   async signup()
   {
-    console.log(this.state.username+"      "+this.state.password);
+    //console.log(.*)$
+    if(this.state.username.length>0 && !this.validateEmail(this.state.username))
+      {
+        this.setState({
+          error : 'Email Invalid'
+        });
+        return ;
+      }
+
     if(this.state.username === '' || this.state.password === '' || this.state.name === '')
-    {alert("invalid fields can't be empty")}
+    {this.setState({
+      error : "Fields can't be Empty"
+        })}
     else{
-      const url = 'http://localhost:8000/users/signup/'
-      console.log(JSON.stringify({ username:this.state.username,password:this.state.password,name:this.state.name }));
+      const url = 'https://questionstack-266907.appspot.com//users/signup/'
+      //console.log(.*)$
       try {
         const response = await fetch(url, {
           method: 'POST',
@@ -51,18 +67,19 @@ class SignUp extends Component{
           body: JSON.stringify({ username:this.state.username,password:this.state.password,name:this.state.name })
         })
         if (response.ok) {
-          console.log(response);
+          //console.log(.*)$
           Router.push('/signupAndLogin/login')
         } else {
-          alert('signup failed.')
+          //console.log(response);
+          this.setState({
+            error : 'User Already exist'
+          })
           
         }
       } catch (error) {
-        console.error(
-          'You have an error in your code or there are Network issues.',
-          error
-        )
-        throw new Error(error)
+        this.setState({
+          error:'Server Not Reachable'
+        })
       }
     }
   }
@@ -87,24 +104,25 @@ class SignUp extends Component{
         <div className="mt-5 border w-full max-w-xs">
   <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
   <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
+      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
         Display Name
       </label>
-      <input value={this.state.name} onChange={this.handledispchange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Name" required/>
+      <input value={this.state.name} onChange={this.handledispchange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name" required/>
     </div>
     <div className="mb-4">
-      <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
         Email
       </label>
       <input value={this.state.username} onChange={this.handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email" required/>
     </div>
     <div className="mb-6">
-      <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
         Password
       </label>
       <input  value={this.state.password} onChange={this.handlePasswordChange} className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" required/>
     </div>
     <div className="flex items-center justify-between">
+    <span className="text-red-500 p-1">{this.state.error}</span>
       <button onClick={()=>this.signup()} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
         Sign Up
       </button>

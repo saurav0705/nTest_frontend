@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next"
+    "dev": "next",
+    "build": "next build"
   },
   "author": "Saurav Aggarwal",
   "license": "ISC",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.7.4",

@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import { urlOfImages } from "./images";
 import fetch from 'isomorphic-fetch';
 import ls from 'local-storage';
+import  Router  from 'next/router';
 class QueryWithAns extends Component{
     constructor()
     {
@@ -28,7 +29,7 @@ class QueryWithAns extends Component{
       }
       async upvote(id)
       {
-        const url = 'http://localhost:8000/answers/'+id+'/upvote'
+        const url = 'https://questionstack-266907.appspot.com//answers/'+id+'/upvote'
         try {
           const response = await fetch(url, {
             method: 'GET',
@@ -38,8 +39,8 @@ class QueryWithAns extends Component{
           )
           if (response.ok) {
             const data = await response.json()
-            console.log("data----------- ",data);
-          console.log(response);
+            //console.log(.*)$
+          //console.log(.*)$
           this.componentDidMount();
           //   await this.setState({
           //       user:data.user
@@ -55,12 +56,12 @@ class QueryWithAns extends Component{
           )
           throw new Error(error)
         }
-        console.log('up----------------------',id);
+        //console.log(.*)$
       }
 
       async downvote(id)
       {
-        const url = 'http://localhost:8000/answers/'+id+'/downvote'
+        const url = 'https://questionstack-266907.appspot.com//answers/'+id+'/downvote'
         try {
           const response = await fetch(url, {
             method: 'GET',
@@ -70,8 +71,8 @@ class QueryWithAns extends Component{
           )
           if (response.ok) {
             const data = await response.json()
-            console.log("data----------- ",data);
-          console.log(response);
+            //console.log(.*)$
+          //console.log(.*)$
           this.componentDidMount();
           //   await this.setState({
           //       user:data.user
@@ -88,13 +89,13 @@ class QueryWithAns extends Component{
           throw new Error(error)
         }
         
-        console.log('down-----------------------',id);
+        //console.log(.*)$
       }
       async show(){
-        await fetch('http://localhost:8000/questions/'+ls.get('obj_id'))
+        await fetch('https://questionstack-266907.appspot.com//questions/'+ls.get('obj_id'))
         .then(response => response.json())
         .then((res)=>{
-            console.log('test---------------- ',res);
+            //console.log(.*)$
             if(res.question){
             this.setState({question : res.question})
                 if(this.state.question.answers){
@@ -106,9 +107,9 @@ class QueryWithAns extends Component{
       }
 
       async submitanswer(){
-        console.log('called');
+        //console.log(.*)$
        
-        const url = 'http://localhost:8000/questions/'+this.state.objId+'/answer';
+        const url = 'https://questionstack-266907.appspot.com//questions/'+this.state.objId+'/answer';
         try {
           const response = await fetch(url, {
             method: 'POST',
@@ -119,15 +120,18 @@ class QueryWithAns extends Component{
           )
           if (response.ok) {
             const data = await response.json()
-            console.log("data----------- ",data);
-          console.log(response);
+            //console.log(.*)$
+          //console.log(.*)$
           this.toggleBox();
           this.componentDidMount();
           //   await this.setState({
           //       user:data.user
           //   })
           } else {
-            alert('unable to fetch')
+            alert('your Session expired')
+            localStorage.setItem('token','');
+            localStorage.setItem('loggedIn',false);
+            Router.push('/');
             
           }
         } catch (error) {
@@ -143,7 +147,7 @@ class QueryWithAns extends Component{
       renderAnswer(){
         if(this.state.answers && this.state.answers.length>0){
         return ( <div>{this.state.answers.map((answer)=>{ return(
-            <div className="flex justify-center bg-green-300 p-4 m-4">
+            <div key={answer._id} className="flex justify-center bg-green-300 p-4 m-4">
         <div className="block md:flex justify-center w-full">
         <div><center>
             <img src={urlOfImages.answer} className="h-6 mt-5"/></center>
@@ -190,7 +194,7 @@ class QueryWithAns extends Component{
                 </div>
             <div className="block text-center  border-gray-600 w-screen w-full">
                 <center>
-            <div className="text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600" >
+            <div key={this.state.question._id} className="text-2l md:text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600" >
                   <b>Q.</b>   {this.state.question.question}
                   
               </div>

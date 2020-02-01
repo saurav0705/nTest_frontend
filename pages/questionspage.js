@@ -22,7 +22,7 @@ class Query extends Component{
         this.setState({ quesbox: event.target.value })
       }
       async componentDidMount() {
-           await fetch('http://localhost:8000/questions/')
+           await fetch('https://questionstack-266907.appspot.com//questions/')
             .then(response => response.json())
             .then((res)=>{
                 this.setState( {questionList : [...res.questionList]});
@@ -39,7 +39,7 @@ class Query extends Component{
       renderQuestion(){
           if(!this.state.questionList || this.state.questionList.length===0 )
             {
-                return (<><div className="text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600">
+                return (<><div  className="text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600">
                 NOTHING FOUND
                 
             </div></>)
@@ -47,7 +47,7 @@ class Query extends Component{
 
           return (<>
               { this.state.questionList.map((question)=>{
-                   return <div className="text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600" onClick={() => this.questionDetails(question._id)}>
+                   return <div key={question._id} className="text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600" onClick={() => this.questionDetails(question._id)}>
                   <b>Q.</b>   {question.question}
                   
               </div>
@@ -68,9 +68,9 @@ class Query extends Component{
       };
 
       async submitquestion(){
-          console.log('called');
-          console.log(this.state.quesbox);
-          const url = 'http://localhost:8000/questions'
+          //console.log(.*)$
+          //console.log(.*)$
+          const url = 'https://questionstack-266907.appspot.com//questions'
           try {
             const response = await fetch(url, {
               method: 'POST',
@@ -81,8 +81,8 @@ class Query extends Component{
             )
             if (response.ok) {
               const data = await response.json()
-              console.log("data----------- ",data);
-            console.log(response);
+              //console.log(.*)$
+            //console.log(.*)$
             this.openQuestionDialog();
             this.componentDidMount();
             //   await this.setState({
@@ -90,6 +90,9 @@ class Query extends Component{
             //   })
             } else {
               alert('Log In to add question')
+            localStorage.setItem('token','');
+            localStorage.setItem('loggedIn',false);
+            Router.push('/');
               
             }
           } catch (error) {
@@ -103,11 +106,11 @@ class Query extends Component{
       
       async test(){
           if(ls.get('query') && ls.get('query').length>0){
-        console.log('tetsing sucess ----------------- ',ls.get('query'));
-            await fetch('http://localhost:8000/questions/search/'+ls.get('query'))
+        //console.log(.*)$
+            await fetch('https://questionstack-266907.appspot.com//questions/search/'+ls.get('query'))
              .then(response => response.json())
              .then((res)=>{
-                 console.log(res);
+                 //console.log(.*)$
                 this.setState( {questionList : [...res.questionList]});
                 localStorage.setItem('query','');
              })}
@@ -124,9 +127,9 @@ class Query extends Component{
         <Layout>
            <div className={this.state.questionBox ? 'hidden':'block'}>
             <div className="flex overflow-hidden">
-                <div className="fixed bottom-3 right-3 md:block  p-4 md:p-8">
-                    <div className=" w-full bg-red-300 hover:bg-red-700 text-white font-bold  mt-10 p-2  rounded ">
-                        <img src={urlOfImages.question} className="h-8 rounded-full inline-block" onClick={()=>{this.openQuestionDialog()}}/><span className="hidden md:block " > Ask A Question</span>
+                <div className="fixed bottom-3 right-3 md:block  p-4 md:p-8 -ml-2">
+                    <div className=" w-full bg-yellow-300 hover:bg-yellow-500 text-white font-bold  mt-10 p-2  rounded " onClick={()=>{this.openQuestionDialog()}}>
+                        <span className="text-2l md:text-2xl " > Q</span>
                     </div>
                     
                     

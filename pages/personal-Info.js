@@ -20,7 +20,7 @@ class Personal extends Component
             Router.push('/');
         }
 
-        const url = 'http://localhost:8000/users/info'
+        const url = 'https://questionstack-266907.appspot.com/users/info'
         try {
             const response = await fetch(url, {
               method: 'GET',
@@ -30,8 +30,8 @@ class Personal extends Component
             )
             if (response.ok) {
               const data = await response.json()
-              console.log(data.user);
-            //   console.log(response);
+              //console.log(.*)$
+            //   //console.log(.*)$
               await this.setState({
                   user:data.user
               })
@@ -44,7 +44,6 @@ class Personal extends Component
               'You have an error in your code or there are Network issues.',
               error
             )
-            throw new Error(error)
           }
        
     }
@@ -60,7 +59,7 @@ class Personal extends Component
             }
 
         return ((<>{this.state.user.questions.map((ques)=>{
-        return (<p className="text-4l m-1 bg-red-600 p-3 rounded">Q. {ques.question}</p>)
+        return (<p key={ques._id} className="text-4l m-1 bg-red-600 p-3 rounded">Q. {ques.question}</p>)
         })}</>))
         }
     }
@@ -75,7 +74,7 @@ class Personal extends Component
             }
 
         return (<>{this.state.user.answers.map((ans)=>{
-        return (<p className="text-4l m-1 bg-green-600 p-3 rounded">A. {ans.answer}</p>)
+        return (<p key={ans._id} className="text-4l m-1 bg-green-600 p-3 rounded">A. {ans.answer}</p>)
         })}</>)
         }
     }
@@ -92,7 +91,7 @@ class Personal extends Component
                     <img src={urlOfImages.copyright} className="mx-2 mt-1 h-8" /></div>
                     <div> <img src={urlOfImages['stack-overflow']} className="h-8"/>
                     </div>
-                    <div><p className="font-bold text-4l mb-2 mt-2">Stack Overflow </p></div>
+                    <div><p className="font-bold text-4l mb-2 mt-2">QuestionOverflow </p></div>
                 </div>
             </div>
             <div className="p-4">

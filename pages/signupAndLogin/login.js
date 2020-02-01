@@ -12,7 +12,7 @@ class LogIn extends Component
   
   constructor(props){
     super(props);
-    this.state = { username: '', password: ''  }
+    this.state = { username: '', password: ''  ,error:''}
     this.handleChange = this.handleChange.bind(this)
     this.handlePasswordChange = this.handlePasswordChange.bind(this)
     
@@ -30,12 +30,15 @@ class LogIn extends Component
 
   async login()
   {
-    console.log(this.state.username+"      "+this.state.password);
+    //console.log(.*)$
     if(this.state.username === '' || this.state.password === '')
-    {alert("invalid fields can't be empty")}
+    {this.setState({
+      error : "Fields can't be Empty"
+        })
+      }
     else{
-      const url = 'http://localhost:8000/users/login/'
-      console.log(JSON.stringify({ username:this.state.username,password:this.state.password }));
+      const url = 'https://questionstack-266907.appspot.com//users/login/'
+      //console.log(.*)$
       try {
         const response = await fetch(url, {
           method: 'POST',
@@ -48,19 +51,19 @@ class LogIn extends Component
           const { token } = await response.json()
           localStorage.setItem('loggedIn','true');
           localStorage.setItem('token',token);
-          console.log(token);
-          console.log(response);
+          //console.log(.*)$
+          //console.log(.*)$
           Router.push('/questionspage');
         } else {
-          alert('Login failed.')
+          this.setState({
+            error : "Invalid Credentials"
+              })
           
         }
       } catch (error) {
-        console.error(
-          'You have an error in your code or there are Network issues.',
-          error
-        )
-        throw new Error(error)
+        this.setState({
+          error : "Server not Reachable"
+            })
       }
     }
   }
@@ -76,17 +79,20 @@ class LogIn extends Component
                   <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <form>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" for="username">
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
                         Email
                       </label>
                       <input value={this.state.username} onChange={this.handleChange} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email" name="username" required/>
                     </div>
                     <div className="mb-6">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                         Password
                       </label>
                       <input  value={this.state.password} onChange={this.handlePasswordChange} className="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" required/>
+                      <span className="text-red-500 p-2 m-2">{this.state.error}</span>
                     </div>
+                    
+                    
                     <div className="flex items-center justify-between">
                       <button type="submit" onClick={()=>{this.login()}} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                         Log In
