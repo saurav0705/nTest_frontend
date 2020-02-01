@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Layout from '../pages/Layout';
 import { Component } from 'react';
 import ls from 'local-storage';
-import { urlOfImages } from './images';
+import { urlOfImages } from '../public/icons/assets/images';
 import  Router  from 'next/router';
 
 class Header extends Component

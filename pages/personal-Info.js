@@ -1,5 +1,5 @@
 import Layout from "./Layout";
-import {urlOfImages} from './images';
+import {urlOfImages} from '../public/icons/assets/images';
 import { useEffect, Component } from "react";
 import ls from 'local-storage'
 import Router from "next/router";

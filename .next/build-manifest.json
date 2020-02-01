@@ -29,6 +29,14 @@
       "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/signupAndLogin/login": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/signupAndLogin/signup": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

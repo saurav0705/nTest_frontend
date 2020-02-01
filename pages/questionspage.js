@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from "./Layout";
-import { urlOfImages } from "./images";
+import { urlOfImages } from "../public/icons/assets/images";
 import fetch from 'isomorphic-fetch';
 import  Router  from 'next/router';
 import ls from 'local-storage';

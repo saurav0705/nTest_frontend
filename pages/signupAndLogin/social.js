@@ -1,4 +1,4 @@
-import {urlOfImages} from '../images';
+import {urlOfImages} from '../../public/icons/assets/images';
 const Social = () => {
     return(
         <div className="container mx-auto">
