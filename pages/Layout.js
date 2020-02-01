@@ -2,7 +2,8 @@ import Header from './header';
 
 const Layout = (props) => {
     return (
-       <div> 
+       <div>
+            
         <Header/>
         { props.children }
      </div>

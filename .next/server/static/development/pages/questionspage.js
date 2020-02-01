@@ -1,7 +1,7 @@
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = require('../../../../ssr-module-cache.js');
+/******/ 	var installedModules = require('../../../ssr-module-cache.js');
 /******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1791,7 +1791,7 @@ const Layout = props => {
   }, __jsx(_header__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: undefined
   }), props.children);
@@ -2256,10 +2256,10 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ "./pages/signupAndLogin/login.js":
-/*!***************************************!*\
-  !*** ./pages/signupAndLogin/login.js ***!
-  \***************************************/
+/***/ "./pages/questionspage.js":
+/*!********************************!*\
+  !*** ./pages/questionspage.js ***!
+  \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2267,16 +2267,15 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _signupAndLogin_social__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../signupAndLogin/social */ "./pages/signupAndLogin/social.js");
-/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Layout */ "./pages/Layout.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
-/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/router */ "next/router");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\signupAndLogin\\login.js";
-
+/* harmony import */ var _Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layout */ "./pages/Layout.js");
+/* harmony import */ var _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/icons/assets/images */ "./public/icons/assets/images.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-fetch */ "isomorphic-fetch");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/router */ "next/router");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! local-storage */ "local-storage");
+/* harmony import */ var local_storage__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(local_storage__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\questionspage.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2285,338 +2284,247 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class LogIn extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
+class Query extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor() {
+    super();
     this.state = {
-      username: '',
-      password: '',
-      error: ''
+      questionList: [],
+      answers: [],
+      questionBox: false,
+      quesbox: '',
+      query: ''
     };
     this.handleChange = this.handleChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
 
   handleChange(event) {
     this.setState({
-      username: event.target.value
+      quesbox: event.target.value
     });
   }
 
-  handlePasswordChange(event) {
-    this.setState({
-      password: event.target.value
-    });
-  }
-
-  async login() {
-    //console.log(.*)$
-    if (this.state.username === '' || this.state.password === '') {
+  async componentDidMount() {
+    await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('https://questionstack-266907.appspot.com//questions/').then(response => response.json()).then(res => {
       this.setState({
-        error: "Fields can't be Empty"
+        questionList: [...res.questionList]
+      });
+    });
+  }
+
+  questionDetails(obj) {
+    localStorage.setItem('obj_id', obj);
+    next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/questionWithAnswers');
+  }
+
+  renderQuestion() {
+    if (!this.state.questionList || this.state.questionList.length === 0) {
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, "NOTHING FOUND"));
+    }
+
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.state.questionList.map(question => {
+      return __jsx("div", {
+        key: question._id,
+        className: "text-4xl bg-red-500 text-white p-8 my-4 mx-4 rounded hover:bg-red-600",
+        onClick: () => this.questionDetails(question._id),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, __jsx("b", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Q."), "   ", question.question);
+    }));
+  }
+
+  logIn() {
+    return local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('loggedIn');
+  }
+
+  openQuestionDialog() {
+    this.setState({
+      questionBox: !this.state.questionBox
+    });
+  }
+
+  async submitquestion() {
+    //console.log(.*)$
+    //console.log(.*)$
+    const url = 'https://questionstack-266907.appspot.com//questions';
+
+    try {
+      const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": '*',
+          'Authorization': 'bearer ' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('token')
+        },
+        body: JSON.stringify({
+          question: this.state.quesbox
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json(); //console.log(.*)$
+        //console.log(.*)$
+
+        this.openQuestionDialog();
+        this.componentDidMount(); //   await this.setState({
+        //       user:data.user
+        //   })
+      } else {
+        alert('Log In to add question');
+        localStorage.setItem('token', '');
+        localStorage.setItem('loggedIn', false);
+        next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push('/');
+      }
+    } catch (error) {
+      console.error('You have an error in your code or there are Network issues.', error);
+      throw new Error(error);
+    }
+  }
+
+  async test() {
+    if (local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query') && local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query').length > 0) {
+      //console.log(.*)$
+      await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_3___default()('https://questionstack-266907.appspot.com//questions/search/' + local_storage__WEBPACK_IMPORTED_MODULE_5___default.a.get('query')).then(response => response.json()).then(res => {
+        //console.log(.*)$
+        this.setState({
+          questionList: [...res.questionList]
+        });
+        localStorage.setItem('query', '');
       });
     } else {
-      const url = 'https://questionstack-266907.appspot.com//users/login/'; //console.log(.*)$
-
-      try {
-        const response = await isomorphic_fetch__WEBPACK_IMPORTED_MODULE_4___default()(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": '*'
-          },
-          body: JSON.stringify({
-            username: this.state.username,
-            password: this.state.password
-          })
-        });
-
-        if (response.ok) {
-          const {
-            token
-          } = await response.json();
-          localStorage.setItem('loggedIn', 'true');
-          localStorage.setItem('token', token); //console.log(.*)$
-          //console.log(.*)$
-
-          next_router__WEBPACK_IMPORTED_MODULE_5___default.a.push('/questionspage');
-        } else {
-          this.setState({
-            error: "Invalid Credentials"
-          });
-        }
-      } catch (error) {
-        this.setState({
-          error: "Server not Reachable"
-        });
-      }
+      return;
     }
   }
 
   render() {
-    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    this.test();
+    return __jsx(_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 127
       },
       __self: this
     }, __jsx("div", {
+      className: this.state.questionBox ? 'hidden' : 'block',
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
-      },
-      __self: this
-    }, __jsx(_signupAndLogin_social__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 76
-      },
-      __self: this
-    }), __jsx("center", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 128
       },
       __self: this
     }, __jsx("div", {
-      className: "mt-5 border w-full max-w-xs",
+      className: "flex overflow-hidden",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 78
+        lineNumber: 129
       },
       __self: this
     }, __jsx("div", {
-      className: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4",
+      className: "fixed bottom-3 right-3 md:block  p-4 md:p-8 -ml-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 79
-      },
-      __self: this
-    }, __jsx("form", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
+        lineNumber: 130
       },
       __self: this
     }, __jsx("div", {
-      className: "mb-4",
+      className: " w-full bg-yellow-300 hover:bg-yellow-500 text-white font-bold  mt-10 p-2  rounded ",
+      onClick: () => {
+        this.openQuestionDialog();
+      },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 131
       },
       __self: this
-    }, __jsx("label", {
-      className: "block text-gray-700 text-sm font-bold mb-2",
-      htmlFor: "username",
+    }, __jsx("span", {
+      className: "text-2l md:text-2xl ",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 132
       },
       __self: this
-    }, "Email"), __jsx("input", {
-      value: this.state.username,
+    }, " Q"))), __jsx("div", {
+      className: "block text-center  border-gray-600 w-screen ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 138
+      },
+      __self: this
+    }, this.renderQuestion()))), __jsx("div", {
+      className: this.state.questionBox ? 'block' : 'hidden',
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 144
+      },
+      __self: this
+    }, __jsx("center", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 145
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "max-w-sm rounded overflow-hidden shadow-lg mt-10 border",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 146
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "px-4 py-6",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 148
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "font-bold text-xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 149
+      },
+      __self: this
+    }, "Write Your Question Here"), __jsx("textarea", {
+      value: this.state.quesbox,
       onChange: this.handleChange,
       className: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
       id: "username",
-      type: "text",
-      placeholder: "Email",
-      name: "username",
       required: true,
+      placeholder: "Enter Your question Here ...",
+      rows: "6",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 151
       },
       __self: this
-    })), __jsx("div", {
-      className: "mb-6",
+    }), __jsx("button", {
+      className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4",
+      onClick: () => this.submitquestion(),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 152
       },
       __self: this
-    }, __jsx("label", {
-      className: "block text-gray-700 text-sm font-bold mb-2",
-      htmlFor: "password",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 88
-      },
-      __self: this
-    }, "Password"), __jsx("input", {
-      value: this.state.password,
-      onChange: this.handlePasswordChange,
-      className: "shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline",
-      id: "password",
-      type: "password",
-      placeholder: "Password",
-      required: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 91
-      },
-      __self: this
-    }), __jsx("span", {
-      className: "text-red-500 p-2 m-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    }, this.state.error)), __jsx("div", {
-      className: "flex items-center justify-between",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 96
-      },
-      __self: this
-    }, __jsx("button", {
-      type: "submit",
-      onClick: () => {
-        this.login();
-      },
-      className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
-      type: "button",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 97
-      },
-      __self: this
-    }, "Log In"), __jsx("a", {
-      className: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800",
-      href: "#",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 101
-      },
-      __self: this
-    }, "Forgot Password?")))))))));
+    }, "Submit Question"))))));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (LogIn);
-
-/***/ }),
-
-/***/ "./pages/signupAndLogin/social.js":
-/*!****************************************!*\
-  !*** ./pages/signupAndLogin/social.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../public/icons/assets/images */ "./public/icons/assets/images.js");
-var _jsxFileName = "C:\\Users\\Lenovo\\Desktop\\ntest\\next_tailwind\\pages\\signupAndLogin\\social.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-const Social = () => {
-  return __jsx("div", {
-    className: "container mx-auto",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: undefined
-  }, __jsx("center", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-20 my-4",
-    src: _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_1__["urlOfImages"]["stack-overflow"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: undefined
-  })), __jsx("div", {
-    className: "w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: undefined
-  }, __jsx("button", {
-    className: "bg-white-500 w-full border border-black max-w-xs text-black py-2 px-6 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-4 m-1",
-    src: _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_1__["urlOfImages"].google,
-    align: "left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: undefined
-  }), " Log in With Google")), __jsx("div", {
-    className: "w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: undefined
-  }, __jsx("button", {
-    className: "bg-blue-700 border w-full max-w-xs text-white py-2 px-4 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-4 m-1",
-    src: _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_1__["urlOfImages"].facebook,
-    align: "left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: undefined
-  }), "Log in With Facebook")), __jsx("div", {
-    className: "w-5/6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: undefined
-  }, __jsx("button", {
-    className: "bg-gray-800 border w-full max-w-xs text-white py-2 px-6 rounded",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: undefined
-  }, __jsx("img", {
-    className: "h-4 m-1",
-    src: _public_icons_assets_images__WEBPACK_IMPORTED_MODULE_1__["urlOfImages"].github,
-    align: "left",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: undefined
-  }), "Log in With Github"))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Social);
+/* harmony default export */ __webpack_exports__["default"] = (Query);
 
 /***/ }),
 
@@ -2646,14 +2554,14 @@ const urlOfImages = {
 
 /***/ }),
 
-/***/ 6:
-/*!*********************************************!*\
-  !*** multi ./pages/signupAndLogin/login.js ***!
-  \*********************************************/
+/***/ 5:
+/*!**************************************!*\
+  !*** multi ./pages/questionspage.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\signupAndLogin\login.js */"./pages/signupAndLogin/login.js");
+module.exports = __webpack_require__(/*! C:\Users\Lenovo\Desktop\ntest\next_tailwind\pages\questionspage.js */"./pages/questionspage.js");
 
 
 /***/ }),
@@ -2779,17 +2687,6 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-dom":
-/*!****************************!*\
-  !*** external "react-dom" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom");
-
-/***/ }),
-
 /***/ "react-is":
 /*!***************************!*\
   !*** external "react-is" ***!
@@ -2813,4 +2710,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=login.js.map
+//# sourceMappingURL=questionspage.js.map

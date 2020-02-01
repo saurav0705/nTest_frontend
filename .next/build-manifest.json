@@ -12,6 +12,8 @@
     ],
     "/_app": [
       "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js",
       "static/development/_buildManifest.js"
     ],
@@ -33,11 +35,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/signupAndLogin/login": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/signupAndLogin/signup": [
+    "/questionspage": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

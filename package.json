@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "build": "next build"
+    "build": "next build",
+    "export": "next export"
   },
   "author": "Saurav Aggarwal",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "isomorphic-fetch": "^2.2.1",
     "local-storage": "^2.0.0",
     "next": "^9.2.1",
+    "postcss-loader": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "tailwindcss": "^1.1.4"
